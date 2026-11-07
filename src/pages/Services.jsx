@@ -399,18 +399,18 @@ export default function Services() {
             </div>
 
             {/* Bottom Actions */}
-            <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-gray-100 w-full">
               <button
                 type="button"
                 onClick={() => setSelectedService(null)}
-                className="btn btn-outline-navy btn-sm"
+                className="btn btn-outline-navy btn-sm w-full sm:w-auto justify-center order-2 sm:order-1"
               >
                 Close Details
               </button>
 
               <Link
                 to={`/appointment?service=${selectedService.id}`}
-                className="btn btn-primary btn-sm"
+                className="btn btn-primary btn-sm w-full sm:w-auto justify-center order-1 sm:order-2"
                 onClick={() => setSelectedService(null)}
               >
                 <Calendar size={15} />

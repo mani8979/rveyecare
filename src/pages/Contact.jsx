@@ -395,7 +395,7 @@ export default function Contact() {
                     <button
                       type="button"
                       onClick={() => alert('Map integration placeholder: Clicking opens Google Maps navigation to the hospital address.')}
-                      className="btn btn-outline-navy btn-sm inline-flex items-center gap-1.5"
+                      className="btn btn-outline-navy btn-sm inline-flex items-center justify-center gap-1.5 w-full sm:w-auto"
                     >
                       <ExternalLink size={14} />
                       <span>Get Driving Directions</span>

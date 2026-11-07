@@ -128,13 +128,13 @@ export default function BlogDetails() {
             </div>
 
             {/* Bottom Actions */}
-            <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
-              <Link to="/blogs" className="btn btn-outline-navy btn-sm">
+            <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 w-full">
+              <Link to="/blogs" className="btn btn-outline-navy btn-sm w-full sm:w-auto justify-center">
                 <ArrowLeft size={15} />
                 <span>All Articles</span>
               </Link>
 
-              <Link to="/appointment" className="btn btn-primary btn-sm">
+              <Link to="/appointment" className="btn btn-primary btn-sm w-full sm:w-auto justify-center">
                 <span>Schedule an Eye Consultation</span>
               </Link>
             </div>

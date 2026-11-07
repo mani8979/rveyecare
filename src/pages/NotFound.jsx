@@ -43,13 +43,13 @@ export default function NotFound() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <Link to="/" className="btn btn-primary">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md mx-auto">
+          <Link to="/" className="btn btn-primary w-full sm:w-auto justify-center">
             <Home size={17} />
             <span>Return to Homepage</span>
           </Link>
 
-          <Link to="/contact" className="btn btn-outline-navy">
+          <Link to="/contact" className="btn btn-outline-navy w-full sm:w-auto justify-center">
             <Phone size={17} />
             <span>Contact Helpdesk</span>
           </Link>

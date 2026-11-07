@@ -228,11 +228,11 @@ export default function AppointmentForm({
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 w-full">
             <button
               type="button"
               onClick={handleReset}
-              className="btn btn-outline-navy flex items-center gap-2"
+              className="btn btn-outline-navy flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <RotateCcw size={16} />
               <span>Book Another Appointment</span>
@@ -241,7 +241,7 @@ export default function AppointmentForm({
             <button
               type="button"
               onClick={() => window.print()}
-              className="btn btn-navy flex items-center gap-2"
+              className="btn btn-navy flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <Printer size={16} />
               <span>Print / Save Slip</span>
