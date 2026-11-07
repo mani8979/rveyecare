@@ -298,13 +298,13 @@ export default function About() {
                 In healthcare, clarity is as vital as competence. At RV Superspeciality Eye Care, we strictly practice within our declared clinical capabilities. We transparently publish our Scope of Services (covering General Check-ups, Cataract, Cornea, Glaucoma, Medical Retina, and Opticals) and openly disclose Non-Scope procedures.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4">
-                <Link to="/services" className="btn btn-primary">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 w-full">
+                <Link to="/services" className="btn btn-primary w-full sm:w-auto justify-center">
                   <span>View Scope of Services Directory</span>
                   <ArrowRight size={17} />
                 </Link>
                 
-                <Link to="/appointment" className="btn btn-outline-navy">
+                <Link to="/appointment" className="btn btn-outline-navy w-full sm:w-auto justify-center">
                   <span>Schedule a Consultation</span>
                 </Link>
               </div>

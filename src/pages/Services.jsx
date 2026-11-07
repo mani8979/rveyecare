@@ -63,17 +63,17 @@ export default function Services() {
             </p>
 
             {/* Quick buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-2xl mx-auto">
               <a 
                 href="#scope-list" 
-                className="btn btn-primary"
+                className="btn btn-primary w-full sm:w-auto justify-center"
               >
                 <span>Explore Available Scope (6 Services)</span>
               </a>
 
               <a 
                 href="#non-scope" 
-                className="btn btn-outline-white"
+                className="btn btn-outline-white w-full sm:w-auto justify-center"
               >
                 <span>View Non-Scope Notice</span>
               </a>
@@ -81,7 +81,7 @@ export default function Services() {
               <button
                 type="button"
                 onClick={() => setShowPosterModal(true)}
-                className="btn bg-white/15 text-white hover:bg-white/25 border-transparent text-xs sm:text-sm py-2 px-4"
+                className="btn bg-white/15 text-white hover:bg-white/25 border-transparent text-xs sm:text-sm py-2 px-4 w-full sm:w-auto justify-center"
               >
                 <FileText size={15} />
                 <span>View Original Hospital Scope Poster</span>

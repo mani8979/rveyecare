@@ -126,3 +126,4 @@ This repository includes a pre-configured `vercel.json` for single-page applicat
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
 5. Click **Deploy**. Vercel will build and assign your production domain within seconds.
+

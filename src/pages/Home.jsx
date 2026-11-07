@@ -182,13 +182,13 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <Link to="/about" className="btn btn-navy">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 w-full pt-2">
+                  <Link to="/about" className="btn btn-navy w-full sm:w-auto justify-center">
                     <span>Learn More About Us</span>
                     <ArrowRight size={17} />
                   </Link>
 
-                  <Link to="/services" className="btn btn-outline-navy">
+                  <Link to="/services" className="btn btn-outline-navy w-full sm:w-auto justify-center">
                     <span>View Scope Poster</span>
                   </Link>
                 </div>
@@ -442,13 +442,13 @@ export default function Home() {
               Schedule your eye-care consultation with RV Superspeciality Eye Care today. Our team is ready to evaluate your vision with precision and care.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link to="/appointment" className="btn btn-primary btn-lg shadow-lg hover:shadow-orange">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xl mx-auto">
+              <Link to="/appointment" className="btn btn-primary btn-lg w-full sm:w-auto justify-center shadow-lg hover:shadow-orange">
                 <Calendar size={19} />
                 <span>Book an Appointment</span>
               </Link>
 
-              <Link to="/contact" className="btn btn-outline-white btn-lg">
+              <Link to="/contact" className="btn btn-outline-white btn-lg w-full sm:w-auto justify-center">
                 <span>View Clinic Location & Timings</span>
               </Link>
             </div>

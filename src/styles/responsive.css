@@ -108,6 +108,12 @@
   .appointment-card {
     padding: 1.5rem !important;
   }
+
+  /* Prevent button overflow */
+  .btn {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* Small Smart Phones (<= 480px) */
@@ -122,8 +128,13 @@
   }
 
   .btn {
-    padding: 0.7rem 1.25rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.88rem;
+    white-space: normal !important;
+    text-align: center;
+    word-break: break-word;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
