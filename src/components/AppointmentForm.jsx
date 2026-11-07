@@ -12,7 +12,8 @@ import {
   Info,
   Sparkles,
   Printer,
-  RotateCcw
+  RotateCcw,
+  MessageSquare
 } from 'lucide-react';
 import { availableServices } from '../data/services';
 
@@ -33,6 +34,7 @@ export default function AppointmentForm({
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedBooking, setSubmittedBooking] = useState(null);
+  const [whatsappUrl, setWhatsappUrl] = useState('');
 
   // Time slots
   const timeSlots = [
@@ -114,6 +116,28 @@ export default function AppointmentForm({
 
     setIsSubmitting(true);
 
+    const serviceObj = availableServices.find(s => s.id === formData.service);
+    const serviceName = serviceObj ? serviceObj.title : formData.service;
+
+    // Clean, professional message without any * asterisks
+    const whatsappMessage = 
+`RV SUPERSPECIALITY EYE CARE - APPOINTMENT REQUEST
+
+Patient Name: ${formData.patientName.trim()}
+Phone Number: ${formData.phone.trim()}
+Email Address: ${formData.email.trim() || 'Not Provided'}
+Service Requested: ${serviceName}
+Preferred Date: ${formData.preferredDate}
+Preferred Time Slot: ${formData.preferredTime}
+Additional Notes: ${formData.message.trim() || 'None'}
+
+Hospital Location: Pendurthi, Visakhapatnam
+Sent from RV Superspeciality Eye Care Website`;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const targetWhatsappUrl = `https://wa.me/918523815336?text=${encodedMessage}`;
+    setWhatsappUrl(targetWhatsappUrl);
+
     // Simulate instant frontend validation and generate booking slip preview
     setTimeout(() => {
       setIsSubmitting(false);
@@ -123,6 +147,13 @@ export default function AppointmentForm({
         ...formData
       };
       setSubmittedBooking(generatedSlip);
+
+      // Automatically launch WhatsApp for direct message to 8523815336
+      try {
+        window.open(targetWhatsappUrl, '_blank', 'noopener,noreferrer');
+      } catch (err) {
+        console.log('Popup blocked, user can click WhatsApp button');
+      }
     }, 600);
   };
 
@@ -162,13 +193,29 @@ export default function AppointmentForm({
             </p>
           </div>
 
-          {/* Transparent Notice */}
-          <div className="p-4 rounded-xl bg-[#FFFBEB] border border-[#FDE68A] flex items-start gap-3 mb-6">
-            <Info size={18} className="text-[#D97706] flex-shrink-0 mt-0.5" />
-            <div className="text-xs text-[#92400E] leading-relaxed">
-              <strong>Frontend Demonstration Notice:</strong> This website operates on the client-side without an active live backend server. In production, this form connects to the hospital's reception/HMS desk for telephonic verification and calendar allocation.
+          {/* WhatsApp Direct Action Banner */}
+          {whatsappUrl && (
+            <div className="bg-[#F0FDF4] border-2 border-[#86EFAC] rounded-2xl p-6 mb-6 text-center shadow-xs">
+              <div className="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm">
+                <MessageSquare size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-[#166534] mb-1">
+                Send Appointment Details via WhatsApp
+              </h4>
+              <p className="text-xs sm:text-sm text-[#15803D] mb-4 max-w-md mx-auto">
+                Your consultation request has been formatted for hospital desk <strong>+91 85238 15336</strong>. Click below if WhatsApp did not open automatically:
+              </p>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3.5 px-6 rounded-xl inline-flex items-center justify-center gap-2.5 shadow-md w-full sm:w-auto transition-transform hover:-translate-y-0.5"
+              >
+                <MessageSquare size={18} />
+                <span>Open WhatsApp (+91 85238 15336)</span>
+              </a>
             </div>
-          </div>
+          )}
 
           {/* Generated Appointment Slip Card */}
           <div className="bg-[#F8FAFD] border-2 border-dashed border-[#CBD5E1] rounded-2xl p-6 mb-8 relative">
@@ -305,7 +352,7 @@ export default function AppointmentForm({
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="e.g. 9876543210"
+                  placeholder="e.g. 8523815336"
                   maxLength={13}
                   className={`form-input ${errors.phone ? 'error' : ''}`}
                 />
@@ -359,7 +406,7 @@ export default function AppointmentForm({
                 <option value="">-- Choose an Available Service --</option>
                 {availableServices.map((svc) => (
                   <option key={svc.id} value={svc.id}>
-                    {svc.title} ({svc.teluguTitle})
+                    {svc.title}
                   </option>
                 ))}
               </select>

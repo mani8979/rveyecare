@@ -16,10 +16,10 @@ export default function TopBar() {
             <Phone size={13} className="text-[#F36B16]" />
             <span>Emergency / Helpline:</span>
             <a 
-              href="tel:+919876543210" 
+              href="tel:+918523815336" 
               className="text-white font-medium hover:text-[#F36B16] transition-colors"
             >
-              +91 98765 43210 <span className="text-gray-400 text-[11px]">(Placeholder)</span>
+              +91 85238 15336
             </a>
           </div>
 
@@ -31,10 +31,16 @@ export default function TopBar() {
 
         {/* Right: Location & Quick Services Notice */}
         <div className="flex items-center gap-5">
-          <div className="flex items-center gap-1.5 text-gray-300">
+          <a
+            href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-gray-300 hover:text-[#F36B16] transition-colors"
+            title="Open RV Superspeciality Eye Care in Google Maps"
+          >
             <MapPin size={13} className="text-[#F36B16]" />
-            <span>[Hospital Address / City Placeholder]</span>
-          </div>
+            <span>Pendurthi, Visakhapatnam</span>
+          </a>
 
           <div className="h-3 w-[1px] bg-blue-900/80" />
 

@@ -36,7 +36,6 @@ export default function Home() {
           <ScrollReveal animation="fade-up" duration={700}>
             <SectionHeading
               badge="EXCELLENCE IN VISION"
-              badgeTelugu="విశ్వసనీయ కంటి సంరక్షణ"
               title="Your Vision Deserves"
               highlight="Expert Care"
               subtitle="RV Superspeciality Eye Care brings together clinical expertise, modern diagnostic tools, and dedicated attention to protect your sight."
@@ -153,7 +152,6 @@ export default function Home() {
               <ScrollReveal animation="fade-left" duration={700}>
                 <SectionHeading
                   badge="ABOUT RV EYE CARE"
-                  badgeTelugu="మా గురించి"
                   title="Dedicated to Protecting"
                   highlight="Your Vision"
                   subtitle="RV Superspeciality Eye Care is focused on comprehensive ophthalmic care, accurate eye diagnosis and personalised treatment. Our aim is to support patients with professional eye-care services and a comfortable healthcare experience."
@@ -206,7 +204,6 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
               <SectionHeading
                 badge="OUR AVAILABLE SERVICES"
-                badgeTelugu="లభించు వైద్య సేవలు"
                 title="Comprehensive Eye Care"
                 highlight="Services"
                 subtitle="Explore our range of ophthalmology services designed to support your eye health and vision, exactly as listed in our official hospital scope catalogue."
@@ -247,7 +244,6 @@ export default function Home() {
           <ScrollReveal animation="fade-up" duration={700}>
             <SectionHeading
               badge="WHY PATIENTS TRUST US"
-              badgeTelugu="మా ప్రత్యేకతలు"
               title="Why Choose"
               highlight="RV Superspeciality Eye Care?"
               subtitle="We believe clear vision starts with careful listening, precise diagnostic evaluation, and ethical medical care."
@@ -339,7 +335,6 @@ export default function Home() {
               <ScrollReveal animation="fade-right" duration={700}>
                 <SectionHeading
                   badge="PATIENT EXPERIENCE"
-                  badgeTelugu="రోగి సంరక్షణ అనుభవం"
                   title="Care That Puts"
                   highlight="Patients First"
                   subtitle="We recognize that visiting an eye doctor can be daunting. We have structured our clinic workflows to provide a calm, dignified, and supportive environment at every step."
@@ -360,7 +355,7 @@ export default function Home() {
                       Clear Communication
                     </h4>
                     <p className="text-xs text-gray-600 leading-relaxed">
-                      Consultations conducted in English and Telugu with straightforward explanations.
+                      Consultations conducted with patient-first empathy and straightforward explanations.
                     </p>
                   </div>
 
@@ -462,7 +457,6 @@ export default function Home() {
           <ScrollReveal animation="fade-up" duration={700}>
             <SectionHeading
               badge="PATIENT EXPERIENCES"
-              badgeTelugu="రోగుల అనుభవాలు"
               title="What Patients Say About"
               highlight="Our Care"
               subtitle="Read representative feedback reflecting our commitment to patient-centred eye diagnostics and compassionate communication."

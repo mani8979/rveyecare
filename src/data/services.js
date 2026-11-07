@@ -7,7 +7,6 @@ export const availableServices = [
   {
     id: 'general-eye-checkup',
     title: 'General Eye Check-up',
-    teluguTitle: 'జనరల్ ఐ చెకప్',
     slug: 'general-eye-checkup',
     iconName: 'Eye',
     image: '/images/service-general.jpg',
@@ -32,7 +31,6 @@ export const availableServices = [
   {
     id: 'cataract-services',
     title: 'Cataract Services',
-    teluguTitle: 'కాటరాక్ట్ సర్వీసెస్',
     slug: 'cataract-services',
     iconName: 'Sun',
     image: '/images/service-cataract.jpg',
@@ -57,7 +55,6 @@ export const availableServices = [
   {
     id: 'cornea-services',
     title: 'Cornea Services',
-    teluguTitle: 'కార్నియా సర్వీసెస్',
     slug: 'cornea-services',
     iconName: 'Sparkles',
     image: '/images/service-cornea.jpg',
@@ -82,7 +79,6 @@ export const availableServices = [
   {
     id: 'glaucoma-services',
     title: 'Glaucoma Services',
-    teluguTitle: 'గ్లకోమా సర్వీసెస్',
     slug: 'glaucoma-services',
     iconName: 'Activity',
     image: '/images/service-glaucoma.jpg',
@@ -107,7 +103,6 @@ export const availableServices = [
   {
     id: 'medical-retina-services',
     title: 'Medical Retina Services',
-    teluguTitle: 'మెడికల్ రెటీనా సేవలు',
     slug: 'medical-retina-services',
     iconName: 'ShieldCheck',
     image: '/images/service-retina.jpg',
@@ -132,21 +127,20 @@ export const availableServices = [
   {
     id: 'opticals',
     title: 'Opticals',
-    teluguTitle: 'ఆప్టికల్స్',
     slug: 'opticals',
     iconName: 'Glasses',
     image: '/images/service-opticals.jpg',
     shortDescription: 'In-house precision optical dispensing unit featuring curated ergonomic frames and certified ophthalmic lenses.',
     overview: 'An accurate prescription is only as good as the dispensing quality of your eyeglasses. Our in-house optical center ensures your clinical prescription is translated into properly centered, certified lenses matched with comfortable, durable frames suited to your lifestyle.',
     keyHighlights: [
-      'Precision optical pupillary distance (PD) and fitting height measurement',
-      'Curated frames: lightweight titanium, flexible TR90, acetate, and rimless',
-      'Single vision, bifocal, and progressive addition lenses (PALs)',
-      'Advanced lens coatings: anti-reflective, blue-light filter, photochromic',
-      'Complimentary frame adjustments, nose-pad replacements, and fit checks'
+      'Precision optical centering and pupil distance measurement',
+      'Anti-reflective, blue-light blocking, and scratch-resistant coatings',
+      'High-index ultra-thin lenses for high prescriptions',
+      'Comfort-fit testing and customized frame alignment',
+      'Quality assurance for all single-vision and progressive spectacles'
     ],
     whoShouldVisit: [
-      'Patients with new spectacle prescriptions requiring accurate lens dispensing',
+      'Patients receiving a new spectacle power prescription',
       'Screen users seeking certified blue-light filter computer glasses',
       'Professionals seeking comfortable progressive lenses without peripheral distortion',
       'Children and active individuals needing durable, impact-resistant frames',
@@ -164,23 +158,19 @@ export const nonScopeServices = [
   {
     id: 'eye-bank',
     title: 'Eye Bank',
-    teluguTitle: 'ఐ బ్యాంక్',
     description: 'RV Superspeciality Eye Care does not operate an in-house eye bank or donor cornea harvesting/storage facility. For corneal donor registration or corneal tissue procurement, patients are directed to authorized government and statutory eye bank institutions.',
     reasonNotice: 'Facility Policy & Statutory Scope'
   },
   {
     id: 'squint-surgery',
     title: 'Squint Surgery',
-    teluguTitle: 'స్క్వింట్ సర్జరీ',
     description: 'While non-surgical pediatric vision screening and refractive assessment for strabismus are conducted, operative squint correction surgery is outside the current surgical scope of this centre. Patients requiring complex extraocular muscle surgery are guided to specialized pediatric strabismology units.',
     reasonNotice: 'Specialized Surgical Scope Restriction'
   },
   {
     id: 'vitreoretinal-surgery',
     title: 'Vitreoretinal Surgery',
-    teluguTitle: 'విట్రో రెటినల్ సర్జరీ',
     description: 'Our hospital provides comprehensive Medical Retina services (including diagnostic screening, medical stabilization, and counseling). However, advanced surgical vitreoretinal interventions (such as pars plana vitrectomy, retinal detachment buckling, or complex endovitreal surgeries) are not performed on-site.',
     reasonNotice: 'Medical Retina Only - Non-Surgical Scope'
   }
 ];
-

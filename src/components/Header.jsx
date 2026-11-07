@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { ChevronDown, Menu, X, Calendar, Phone, ArrowRight, ShieldAlert } from 'lucide-react';
+import { ChevronDown, Menu, X, Calendar, Phone, ArrowRight, ShieldAlert, Sparkles, MapPin } from 'lucide-react';
 import Logo from './Logo';
 import { availableServices } from '../data/services';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
   const location = useLocation();
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
+    setMobileServicesOpen(false);
   }, [location.pathname]);
 
   // Lock background scrolling when mobile drawer is open
@@ -29,11 +31,13 @@ export default function Header() {
     };
   }, [mobileMenuOpen]);
 
-  // Handle Escape key to close mobile drawer
+  // Handle Escape key to close mobile drawer or dropdown
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
         setMobileMenuOpen(false);
+        setServicesDropdownOpen(false);
+        setMobileServicesOpen(false);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -53,7 +57,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle click outside dropdown
+  // Handle click outside desktop dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -89,6 +93,7 @@ export default function Header() {
           <nav className="desktop-nav hidden lg:flex items-center gap-7" aria-label="Main Navigation">
             {navLinks.map((item) => {
               if (item.hasDropdown) {
+                const isServicesActive = location.pathname.startsWith('/services');
                 return (
                   <div 
                     key={item.name} 
@@ -97,15 +102,16 @@ export default function Header() {
                     onMouseEnter={() => setServicesDropdownOpen(true)}
                     onMouseLeave={() => setServicesDropdownOpen(false)}
                   >
-                    <NavLink
-                      to={item.path}
-                      className={({ isActive }) =>
-                        `flex items-center gap-1 text-[15px] font-semibold transition-colors py-2 ${
-                          isActive 
-                            ? 'text-[#F36B16]' 
-                            : 'text-[#142F80] hover:text-[#F36B16]'
-                        }`
-                      }
+                    <button
+                      type="button"
+                      onClick={() => setServicesDropdownOpen((prev) => !prev)}
+                      className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors py-2 cursor-pointer outline-none ${
+                        servicesDropdownOpen || isServicesActive
+                          ? 'text-[#F36B16]' 
+                          : 'text-[#142F80] hover:text-[#F36B16]'
+                      }`}
+                      aria-expanded={servicesDropdownOpen}
+                      aria-haspopup="true"
                     >
                       <span>{item.name}</span>
                       <ChevronDown 
@@ -114,31 +120,33 @@ export default function Header() {
                           servicesDropdownOpen ? 'rotate-180 text-[#F36B16]' : 'text-[#142F80]'
                         }`} 
                       />
-                    </NavLink>
+                    </button>
 
-                    {/* Services Dropdown Menu */}
+                    {/* Services Dropdown Menu (Desktop) */}
                     {servicesDropdownOpen && (
-                      <div className="absolute top-full left-0 w-80 bg-white rounded-xl shadow-xl border border-[#E3E9F4] p-3 py-3 mt-0 animate-fadeIn z-50">
-                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-3 pb-2 border-b border-gray-100 mb-2 flex items-center justify-between">
-                          <span>Available Scope of Services</span>
-                          <span className="text-[10px] text-green-700 bg-green-50 px-1.5 py-0.5 rounded font-semibold">6 Services</span>
+                      <div className="absolute top-full left-0 w-[380px] bg-white rounded-2xl shadow-2xl border border-[#E3E9F4] p-3.5 mt-1 animate-fadeIn z-50">
+                        {/* Header Badge Row */}
+                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-3 pb-2.5 border-b border-gray-100 mb-2 flex items-center justify-between">
+                          <span>AVAILABLE SCOPE OF SERVICES</span>
+                          <span className="text-[10px] text-[#16803C] bg-[#E8F8F0] px-2 py-0.5 rounded-full font-bold">
+                            6 SERVICES
+                          </span>
                         </div>
 
+                        {/* List of 6 Available Services */}
                         <div className="space-y-1">
                           {availableServices.map((svc) => (
                             <Link
                               key={svc.id}
-                              to={`/services#${svc.id}`}
-                              className="group flex flex-col px-3 py-2 rounded-lg hover:bg-[#F3F6FC] transition-colors"
+                              to={`/services/${svc.slug}`}
+                              className="group flex flex-col px-3 py-2 rounded-xl hover:bg-[#F3F6FC] transition-colors"
                               onClick={() => setServicesDropdownOpen(false)}
                             >
                               <div className="flex items-center justify-between">
-                                <span className="text-sm font-semibold text-[#142F80] group-hover:text-[#F36B16] transition-colors">
+                                <span className="text-[14px] font-bold text-[#142F80] group-hover:text-[#F36B16] transition-colors">
                                   {svc.title}
                                 </span>
-                                <span className="text-[11px] font-telugu text-gray-500 font-medium">
-                                  {svc.teluguTitle}
-                                </span>
+                                <ArrowRight size={13} className="text-gray-300 group-hover:text-[#F36B16] group-hover:translate-x-0.5 transition-all" />
                               </div>
                               <span className="text-[11.5px] text-gray-500 line-clamp-1 mt-0.5">
                                 {svc.shortDescription}
@@ -148,14 +156,23 @@ export default function Header() {
                         </div>
 
                         {/* Non-scope quick link notice in dropdown */}
-                        <div className="mt-2 pt-2 border-t border-gray-100 px-3">
+                        <div className="mt-2.5 pt-2.5 border-t border-gray-100 px-3 flex flex-col gap-2">
                           <Link
                             to="/services#non-scope"
-                            className="flex items-center gap-2 text-[11.5px] text-[#C2410C] hover:text-[#9A3412] font-semibold py-1"
+                            className="flex items-center gap-2 text-[12px] text-[#C2410C] hover:text-[#9A3412] font-semibold py-1 transition-colors"
                             onClick={() => setServicesDropdownOpen(false)}
                           >
-                            <ShieldAlert size={13} className="flex-shrink-0" />
+                            <ShieldAlert size={14} className="flex-shrink-0" />
                             <span>View Non-Scope Services Notice</span>
+                          </Link>
+
+                          <Link
+                            to="/services"
+                            className="flex items-center justify-between text-[11.5px] font-bold text-[#142F80] hover:text-[#F36B16] py-1 border-t border-gray-50 transition-colors"
+                            onClick={() => setServicesDropdownOpen(false)}
+                          >
+                            <span>Explore All Services Directory</span>
+                            <ArrowRight size={13} />
                           </Link>
                         </div>
                       </div>
@@ -226,7 +243,7 @@ export default function Header() {
 
         {/* Off-Canvas Drawer Sliding in from Left to Right */}
         <aside 
-          className={`fixed top-0 left-0 bottom-0 w-[86%] max-w-[340px] bg-white z-50 shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-in-out transform ${
+          className={`fixed top-0 left-0 bottom-0 w-[88%] max-w-[360px] bg-white z-50 shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-in-out transform ${
             mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
           aria-label="Mobile Navigation Menu"
@@ -251,43 +268,122 @@ export default function Header() {
               Menu Navigation
             </div>
 
-            {navLinks.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.path}
-                onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) =>
-                  `px-3.5 py-3 rounded-xl text-base font-bold flex items-center justify-between transition-all ${
-                    isActive 
-                      ? 'bg-[#EDF3FC] text-[#F36B16] shadow-xs' 
-                      : 'text-[#142F80] hover:bg-gray-50 hover:text-[#F36B16]'
-                  }`
-                }
-              >
-                <span>{item.name}</span>
-                <ArrowRight size={16} className="text-gray-400" />
-              </NavLink>
-            ))}
+            {navLinks.map((item) => {
+              if (item.hasDropdown) {
+                const isServicesActive = location.pathname.startsWith('/services');
+                return (
+                  <div key={item.name} className="flex flex-col">
+                    {/* Interactive Services Item with Chevron */}
+                    <button
+                      type="button"
+                      onClick={() => setMobileServicesOpen((prev) => !prev)}
+                      className={`px-3.5 py-3 rounded-xl text-base font-bold flex items-center justify-between transition-all w-full text-left cursor-pointer ${
+                        mobileServicesOpen || isServicesActive
+                          ? 'bg-[#EDF3FC] text-[#F36B16] shadow-xs' 
+                          : 'text-[#142F80] hover:bg-gray-50 hover:text-[#F36B16]'
+                      }`}
+                      aria-expanded={mobileServicesOpen}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span>{item.name}</span>
+                        <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2 py-0.5 rounded-full">
+                          6 Services
+                        </span>
+                      </span>
+                      <ChevronDown 
+                        size={18} 
+                        className={`transition-transform duration-200 ${
+                          mobileServicesOpen ? 'rotate-180 text-[#F36B16]' : 'text-[#142F80]'
+                        }`} 
+                      />
+                    </button>
 
-            {/* Quick Scope Services Preview */}
-            <div className="mt-4 pt-3 border-t border-gray-100 px-1">
-              <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-2 px-2">
-                Scope Services (6):
-              </span>
-              <div className="space-y-1">
-                {availableServices.map((svc) => (
-                  <Link
-                    key={svc.id}
-                    to={`/services#${svc.id}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold text-gray-700 hover:text-[#F36B16] hover:bg-gray-50"
-                  >
-                    <span>{svc.title}</span>
-                    <span className="font-telugu text-[10.5px] text-gray-400">{svc.teluguTitle}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+                    {/* Collapsible Mobile Dropdown Card */}
+                    {mobileServicesOpen && (
+                      <div className="mt-2 mb-2 p-3.5 bg-white rounded-2xl border border-[#CBD9F5] shadow-md space-y-2 animate-fadeIn">
+                        {/* Header Row */}
+                        <div className="flex items-center justify-between pb-2 border-b border-gray-100 text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+                          <span>AVAILABLE SCOPE OF SERVICES</span>
+                          <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2 py-0.5 rounded-full">
+                            6 SERVICES
+                          </span>
+                        </div>
+
+                        {/* 6 Available Services List */}
+                        <div className="space-y-1">
+                          {availableServices.map((svc) => (
+                            <Link
+                              key={svc.id}
+                              to={`/services/${svc.slug}`}
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setMobileServicesOpen(false);
+                              }}
+                              className="group block px-2.5 py-2 rounded-xl hover:bg-[#F3F6FC] transition-colors"
+                            >
+                              <div className="flex items-center justify-between">
+                                <span className="text-[13.5px] font-bold text-[#142F80] group-hover:text-[#F36B16] transition-colors">
+                                  {svc.title}
+                                </span>
+                                <ArrowRight size={13} className="text-gray-300 group-hover:text-[#F36B16] group-hover:translate-x-0.5 transition-all" />
+                              </div>
+                              <p className="text-[11px] text-gray-500 line-clamp-1 mt-0.5 m-0 leading-normal">
+                                {svc.shortDescription}
+                              </p>
+                            </Link>
+                          ))}
+                        </div>
+
+                        {/* Non-Scope Notice & Full Services Directory Link */}
+                        <div className="pt-2 border-t border-gray-100 space-y-1.5">
+                          <Link
+                            to="/services#non-scope"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setMobileServicesOpen(false);
+                            }}
+                            className="flex items-center gap-2 text-xs font-semibold text-[#C2410C] hover:text-[#9A3412] px-2 py-1.5 rounded-lg hover:bg-orange-50/50 transition-colors"
+                          >
+                            <ShieldAlert size={14} className="flex-shrink-0" />
+                            <span>View Non-Scope Services Notice</span>
+                          </Link>
+
+                          <Link
+                            to="/services"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setMobileServicesOpen(false);
+                            }}
+                            className="flex items-center justify-between text-xs font-bold text-[#142F80] hover:text-[#F36B16] px-2 py-1.5 rounded-lg hover:bg-blue-50/50 transition-colors"
+                          >
+                            <span>Explore All Services Directory</span>
+                            <ArrowRight size={13} />
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <NavLink
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={({ isActive }) =>
+                    `px-3.5 py-3 rounded-xl text-base font-bold flex items-center justify-between transition-all ${
+                      isActive 
+                        ? 'bg-[#EDF3FC] text-[#F36B16] shadow-xs' 
+                        : 'text-[#142F80] hover:bg-gray-50 hover:text-[#F36B16]'
+                    }`
+                  }
+                >
+                  <span>{item.name}</span>
+                  <ArrowRight size={16} className="text-gray-400" />
+                </NavLink>
+              );
+            })}
           </div>
 
           {/* Drawer Footer: Actions & Emergency Contact */}
@@ -302,11 +398,21 @@ export default function Header() {
             </Link>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+918523815336"
               className="btn btn-outline-navy w-full py-2.5 text-xs font-bold"
             >
               <Phone size={15} />
-              <span>Emergency: +91 98765 43210</span>
+              <span>Emergency: +91 85238 15336</span>
+            </a>
+
+            <a
+              href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 text-xs font-semibold text-[#142F80] hover:text-[#F36B16] pt-1 transition-colors"
+            >
+              <MapPin size={13} className="text-[#F36B16]" />
+              <span>Pendurthi, Visakhapatnam</span>
             </a>
 
             <div className="text-[9.5px] text-center text-gray-400 pt-1 uppercase font-semibold tracking-wider">

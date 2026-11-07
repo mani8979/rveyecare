@@ -5,7 +5,6 @@ import React from 'react';
  */
 export default function SectionHeading({
   badge,
-  badgeTelugu,
   title,
   highlight,
   subtitle,
@@ -16,20 +15,11 @@ export default function SectionHeading({
   return (
     <div className={`mb-12 ${centered ? 'text-center mx-auto max-w-2xl' : 'max-w-2xl'} ${className}`}>
       {badge && (
-        <div className={`inline-flex flex-wrap items-center gap-2.5 mb-3.5 ${centered ? 'justify-center' : ''}`}>
+        <div className={`inline-flex items-center gap-2.5 mb-3.5 ${centered ? 'justify-center' : ''}`}>
           <span className={`badge ${light ? 'badge-white' : 'badge-navy'}`}>
             <span className="w-1.5 h-1.5 rounded-full bg-[#F36B16]" />
             {badge}
           </span>
-          {badgeTelugu && (
-            <span className={`badge-telugu ${
-              light 
-                ? 'bg-white/20 text-white border border-white/30' 
-                : 'bg-[#FFF5EE] text-[#F36B16] border border-[#FED7AA]'
-            }`}>
-              {badgeTelugu}
-            </span>
-          )}
         </div>
       )}
 
@@ -54,4 +44,3 @@ export default function SectionHeading({
     </div>
   );
 }
-

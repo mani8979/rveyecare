@@ -33,11 +33,11 @@ export default function NotFound() {
             {availableServices.map((svc) => (
               <Link
                 key={svc.id}
-                to={`/services#${svc.id}`}
+                to={`/services/${svc.slug}`}
                 className="flex items-center justify-between p-2 rounded-lg hover:bg-[#F3F6FC] text-[#142F80] hover:text-[#F36B16] transition-colors"
               >
                 <span>{svc.title}</span>
-                <span className="text-xs font-telugu text-gray-400">{svc.teluguTitle}</span>
+                <span className="text-xs text-gray-400">Available</span>
               </Link>
             ))}
           </div>

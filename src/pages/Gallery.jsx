@@ -40,13 +40,9 @@ export default function Gallery() {
               FACILITY & INFRASTRUCTURE
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
               Hospital Photo Gallery
             </h1>
-
-            <div className="text-xl font-telugu text-[#F36B16] font-semibold mb-4">
-              హాస్పిటల్ ఫోటో గ్యాలరీ
-            </div>
 
             <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mx-auto">
               Explore our consultation suites, modern diagnostic rooms, patient reception, and dedicated optical care dispensing unit.

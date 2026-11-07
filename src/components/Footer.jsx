@@ -75,16 +75,15 @@ export default function Footer() {
             <h4 className="text-base font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-[#F36B16] pl-2.5">
               Scope of Services
             </h4>
-            <p className="text-xs text-[#F36B16] font-telugu mb-3">లభించు వైద్య సేవలు</p>
             <ul className="space-y-2 text-sm">
               {availableServices.map((svc) => (
                 <li key={svc.id}>
                   <Link
-                    to={`/services#${svc.id}`}
+                    to={`/services/${svc.slug}`}
                     className="flex items-center justify-between text-gray-300 hover:text-white hover:translate-x-1 transition-all group py-1"
                   >
                     <span className="group-hover:text-[#F36B16] transition-colors">{svc.title}</span>
-                    <span className="text-xs text-gray-400 font-telugu">{svc.teluguTitle}</span>
+                    <ArrowRight size={13} className="text-gray-500 group-hover:text-[#F36B16]" />
                   </Link>
                 </li>
               ))}
@@ -138,10 +137,25 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#F36B16] flex-shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-white font-semibold block">Hospital Address:</span>
-                  <span className="text-xs text-gray-300">
-                    [RV Superspeciality Eye Care Address, Main Road, City, State - PIN Placeholder]
-                  </span>
+                  <span className="text-white font-semibold block text-sm">Hospital Location:</span>
+                  <a 
+                    href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-gray-300 hover:text-[#F36B16] transition-colors leading-relaxed block mt-0.5"
+                  >
+                    RV Superspeciality Eye Care<br />
+                    Araku - Srungavarapukota Road, Ratnagiri Nagar,<br />
+                    Pendurthi, Visakhapatnam, AP – 530051
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] text-[#F36B16] font-semibold hover:underline mt-1"
+                  >
+                    <span>Open in Google Maps &rarr;</span>
+                  </a>
                 </div>
               </div>
 
@@ -149,8 +163,8 @@ export default function Footer() {
                 <Phone size={18} className="text-[#F36B16] flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="text-white font-semibold block">Phone / Helpline:</span>
-                  <a href="tel:+919876543210" className="text-xs text-gray-200 hover:text-[#F36B16]">
-                    +91 98765 43210 (Placeholder)
+                  <a href="tel:+918523815336" className="text-xs text-gray-200 hover:text-[#F36B16]">
+                    +91 85238 15336
                   </a>
                 </div>
               </div>
@@ -160,7 +174,7 @@ export default function Footer() {
                 <div>
                   <span className="text-white font-semibold block">Email Address:</span>
                   <a href="mailto:info@rveyecare.com" className="text-xs text-gray-200 hover:text-[#F36B16]">
-                    info@rveyecare.com (Placeholder)
+                    info@rveyecare.com
                   </a>
                 </div>
               </div>

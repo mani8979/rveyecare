@@ -107,13 +107,9 @@ export default function Contact() {
               PATIENT HELPDESK & LOCATION
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
               Contact RV Superspeciality Eye Care
             </h1>
-
-            <div className="text-xl font-telugu text-[#F36B16] font-semibold mb-4">
-              మమ్మల్ని సంప్రదించండి
-            </div>
 
             <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mx-auto">
               Have questions regarding our scope of services, consultation timings, or appointment slots? Our hospital desk is here to assist you.
@@ -155,12 +151,17 @@ export default function Contact() {
                       RV SUPERSPECIALITY EYE CARE
                     </p>
                     <p className="text-xs text-gray-600 leading-relaxed">
-                      [Hospital Address / Landmark / Street Placeholder]<br />
-                      [City, State – Postal Code Placeholder]
+                      Araku - Srungavarapukota Road, Ratnagiri Nagar,<br />
+                      Pendurthi, Visakhapatnam, Andhra Pradesh – 530051
                     </p>
-                    <span className="text-[11px] text-gray-400 mt-1 block">
-                      (Editable location placeholder)
-                    </span>
+                    <a
+                      href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-[#F36B16] font-bold hover:underline inline-block mt-2"
+                    >
+                      Open in Google Maps &rarr;
+                    </a>
                   </div>
                 </div>
               </ScrollReveal>
@@ -176,7 +177,9 @@ export default function Contact() {
                       Phone & Emergency Helpline
                     </h4>
                     <p className="text-sm font-bold text-gray-800">
-                      +91 98765 43210 <span className="text-xs text-gray-400 font-normal">(Placeholder)</span>
+                      <a href="tel:+918523815336" className="text-[#142F80] hover:text-[#F36B16] transition-colors">
+                        +91 85238 15336
+                      </a>
                     </p>
                     <p className="text-xs text-gray-600 mt-0.5">
                       Available during clinic hours for bookings & queries.
@@ -196,7 +199,9 @@ export default function Contact() {
                       Email Correspondence
                     </h4>
                     <p className="text-sm font-bold text-gray-800">
-                      info@rveyecare.com <span className="text-xs text-gray-400 font-normal">(Placeholder)</span>
+                      <a href="mailto:info@rveyecare.com" className="text-[#142F80] hover:text-[#F36B16] transition-colors">
+                        info@rveyecare.com
+                      </a>
                     </p>
                     <p className="text-xs text-gray-600 mt-0.5">
                       For corporate queries, records, and general enquiries.
@@ -295,7 +300,7 @@ export default function Contact() {
                             id="contactPhone"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            placeholder="e.g. 9876543210"
+                            placeholder="e.g. 8523815336"
                             className={`form-input ${errors.phone ? 'error' : ''}`}
                           />
                           {errors.phone && <div className="form-error"><AlertCircle size={13} /><span>{errors.phone}</span></div>}
@@ -374,54 +379,48 @@ export default function Contact() {
 
           </div>
 
-          {/* GOOGLE MAPS PLACEHOLDER SECTION */}
+          {/* GOOGLE MAPS SECTION */}
           <div className="mt-16">
             <ScrollReveal animation="fade-up" duration={700}>
               <div className="card p-6 sm:p-8 bg-white border border-[#E3E9F4] rounded-3xl shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                   <div>
                     <span className="badge badge-navy text-[10px] mb-1">
-                      HOSPITAL LOCATION MAP
+                      OFFICIAL HOSPITAL LOCATION
                     </span>
                     <h3 className="text-xl font-bold text-[#142F80]">
-                      Find Us on the Map
+                      Find RV Superspeciality Eye Care
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-500">
-                      Easily accessible location with barrier-free patient entry and convenient parking.
+                      Araku - Srungavarapukota Road, Ratnagiri Nagar, Pendurthi, Visakhapatnam – 530051
                     </p>
                   </div>
 
                   <div>
-                    <button
-                      type="button"
-                      onClick={() => alert('Map integration placeholder: Clicking opens Google Maps navigation to the hospital address.')}
-                      className="btn btn-outline-navy btn-sm inline-flex items-center justify-center gap-1.5 w-full sm:w-auto"
+                    <a
+                      href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-sm inline-flex items-center justify-center gap-1.5 w-full sm:w-auto shadow-sm"
                     >
                       <ExternalLink size={14} />
-                      <span>Get Driving Directions</span>
-                    </button>
+                      <span>Get Driving Directions in Google Maps</span>
+                    </a>
                   </div>
                 </div>
 
-                {/* Styled Map Canvas Placeholder */}
-                <div className="relative h-72 sm:h-80 w-full rounded-2xl overflow-hidden bg-[#EDF3FC] border border-[#CBD9F5] flex items-center justify-center">
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#142F80_1px,transparent_1px)] [background-size:16px_16px]" />
-                  
-                  {/* Center Pin Card */}
-                  <div className="relative z-10 bg-white p-5 rounded-2xl shadow-xl border border-[#CBD9F5] max-w-sm text-center">
-                    <div className="w-12 h-12 rounded-full bg-[#142F80] text-white flex items-center justify-center mx-auto mb-3 shadow-md">
-                      <MapPin size={24} className="text-[#F36B16]" />
-                    </div>
-                    <h4 className="text-base font-extrabold text-[#142F80]">
-                      RV SUPERSPECIALITY EYE CARE
-                    </h4>
-                    <p className="text-xs text-[#F36B16] font-semibold mt-0.5">
-                      RIGHT PLACE FOR YOUR BRIGHT VISION
-                    </p>
-                    <p className="text-xs text-gray-600 mt-2">
-                      [Hospital Address / Landmark / Main Road Placeholder]
-                    </p>
-                  </div>
+                {/* Interactive Google Map Embed */}
+                <div className="relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden border border-[#CBD9F5] shadow-inner bg-gray-100">
+                  <iframe
+                    title="RV Superspeciality Eye Care Location"
+                    src="https://maps.google.com/maps?q=17.8033596,83.2092257&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </div>
             </ScrollReveal>
@@ -432,7 +431,6 @@ export default function Contact() {
             <ScrollReveal animation="fade-up" duration={700}>
               <SectionHeading
                 badge="HELP & CLARIFICATIONS"
-                badgeTelugu="తరచుగా అడిగే ప్రశ్నలు"
                 title="Frequently Asked"
                 highlight="Questions"
                 subtitle="Helpful information regarding hospital consultations, appointments, and scope services."

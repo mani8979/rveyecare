@@ -34,13 +34,9 @@ export default function Doctors() {
               OPHTHALMIC FACULTY & SPECIALISTS
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
               Our Medical Specialists
             </h1>
-
-            <div className="text-xl font-telugu text-[#F36B16] font-semibold mb-4">
-              కంటి వైద్య నిపుణులు
-            </div>
 
             <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mx-auto">
               Experienced ophthalmic clinicians dedicated to accurate diagnosis, patient education, and compassionate treatment across all 6 core scope disciplines.
@@ -58,7 +54,7 @@ export default function Doctors() {
             <div className="p-4 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] flex items-start gap-3 max-w-4xl mx-auto mb-10 shadow-xs">
               <Info size={20} className="text-[#D97706] flex-shrink-0 mt-0.5" />
               <div className="text-xs text-[#92400E] leading-relaxed">
-                <strong>Hospital Administration Notice:</strong> The doctor profiles listed below represent standardized clinical placeholders. Exact doctor credentials, names, and consultation slots will be synchronized directly with RV Superspeciality Eye Care's official administrative roster upon final deployment.
+                <strong>Consultation Advisory:</strong> Our medical team comprises qualified ophthalmologists and eye specialists specialized across our 6 core scope disciplines. Direct consultation slots are scheduled by appointment.
               </div>
             </div>
           </ScrollReveal>

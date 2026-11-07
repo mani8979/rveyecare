@@ -42,8 +42,8 @@ export default function ServiceCard({ service }) {
             <IconComponent size={13} className="text-[#F36B16]" />
             <span>Scope Service</span>
           </span>
-          <span className="font-telugu text-xs font-semibold px-2 py-0.5 rounded bg-white/90 text-[#142F80]">
-            {service.teluguTitle}
+          <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-white/95 text-[#142F80]">
+            Advanced Eye Care
           </span>
         </div>
       </div>
@@ -52,14 +52,9 @@ export default function ServiceCard({ service }) {
       <div className="p-6 flex flex-col flex-1 justify-between">
         <div>
           {/* Service Title */}
-          <h3 className="text-xl font-bold text-[#142F80] group-hover:text-[#F36B16] transition-colors mb-1.5">
+          <h3 className="text-xl font-bold text-[#142F80] group-hover:text-[#F36B16] transition-colors mb-2">
             {service.title}
           </h3>
-
-          {/* Telugu Secondary Title */}
-          <div className="text-xs font-telugu font-semibold text-[#F36B16] mb-3">
-            {service.teluguTitle}
-          </div>
 
           {/* Description */}
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -68,7 +63,7 @@ export default function ServiceCard({ service }) {
 
           {/* Key highlights bullet preview */}
           {service.keyHighlights && service.keyHighlights.length > 0 && (
-            <div className="space-y-1.5 pt-2 border-t border-gray-100 mb-5">
+            <div className="space-y-1.5 pt-3 border-t border-gray-100 mb-5">
               {service.keyHighlights.slice(0, 2).map((item, idx) => (
                 <div key={idx} className="flex items-start gap-2 text-xs text-gray-600">
                   <CheckCircle2 size={13} className="text-[#F36B16] flex-shrink-0 mt-0.5" />
@@ -79,13 +74,13 @@ export default function ServiceCard({ service }) {
           )}
         </div>
 
-        {/* Action Link */}
+        {/* Action Link: "View More" linking to dedicated service detail page */}
         <div className="pt-2">
           <Link
-            to={`/services#${service.id}`}
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#142F80] group-hover:text-[#F36B16] transition-colors"
+            to={`/services/${service.slug}`}
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#142F80] group-hover:text-[#F36B16] transition-colors"
           >
-            <span>Learn More & Details</span>
+            <span>View More</span>
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -93,4 +88,3 @@ export default function ServiceCard({ service }) {
     </div>
   );
 }
-

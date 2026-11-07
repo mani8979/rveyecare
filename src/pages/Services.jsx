@@ -50,13 +50,9 @@ export default function Services() {
               HOSPITAL CLINICAL SCOPE
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
               OUR SCOPE OF SERVICES
             </h1>
-
-            <div className="text-xl sm:text-2xl font-telugu text-[#F36B16] font-semibold mb-4">
-              లభించు వైద్య సేవలు
-            </div>
 
             <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mx-auto mb-6">
               Comprehensive Ophthalmology Services. We take pride in transparent clinical care, clearly detailing all available treatments and statutory non-scope exclusions.
@@ -99,11 +95,8 @@ export default function Services() {
           <ScrollReveal animation="fade-up" duration={700}>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
               <div>
-                <div className="inline-flex flex-wrap items-center gap-2.5 mb-2">
-                  <span className="badge badge-navy">OPHTHALMOLOGY</span>
-                  <span className="badge-telugu bg-[#FFF5EE] text-[#F36B16] border border-[#FED7AA]">
-                    ఆప్తమాలజీ
-                  </span>
+                <div className="inline-flex items-center gap-2.5 mb-2">
+                  <span className="badge badge-navy">COMPREHENSIVE OPHTHALMOLOGY</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111B33]">
                   Available Scope of Services <span className="text-[#F36B16]">(6 Services)</span>
@@ -154,10 +147,10 @@ export default function Services() {
                       <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
                         <span className="inline-flex items-center gap-1.5 text-xs font-bold bg-[#F36B16] px-2.5 py-1 rounded">
                           <Icon size={13} />
-                          <span>Available</span>
+                          <span>Scope Service</span>
                         </span>
-                        <span className="text-xs font-telugu font-semibold bg-white/90 text-[#142F80] px-2 py-0.5 rounded">
-                          {svc.teluguTitle}
+                        <span className="text-xs font-semibold bg-white/95 text-[#142F80] px-2.5 py-0.5 rounded">
+                          Advanced Care
                         </span>
                       </div>
                     </div>
@@ -165,12 +158,9 @@ export default function Services() {
                     {/* Body */}
                     <div className="p-6 flex flex-col flex-1 justify-between">
                       <div>
-                        <h3 className="text-xl font-extrabold text-[#142F80] group-hover:text-[#F36B16] transition-colors mb-1">
+                        <h3 className="text-xl font-extrabold text-[#142F80] group-hover:text-[#F36B16] transition-colors mb-3">
                           {svc.title}
                         </h3>
-                        <div className="text-xs font-telugu font-semibold text-[#F36B16] mb-3">
-                          {svc.teluguTitle}
-                        </div>
 
                         <p className="text-sm text-gray-600 leading-relaxed mb-4">
                           {svc.shortDescription}
@@ -192,14 +182,13 @@ export default function Services() {
 
                       {/* Actions */}
                       <div className="pt-3 border-t border-gray-100 flex items-center justify-between gap-3">
-                        <button
-                          type="button"
-                          onClick={() => setSelectedService(svc)}
-                          className="text-xs sm:text-sm font-bold text-[#142F80] hover:text-[#F36B16] transition-colors inline-flex items-center gap-1"
+                        <Link
+                          to={`/services/${svc.slug}`}
+                          className="text-xs sm:text-sm font-bold text-[#142F80] hover:text-[#F36B16] transition-colors inline-flex items-center gap-1.5"
                         >
-                          <span>View Full Clinical Details</span>
-                          <ChevronRight size={15} />
-                        </button>
+                          <span>View More</span>
+                          <ArrowRight size={14} />
+                        </Link>
 
                         <Link
                           to={`/appointment?service=${svc.id}`}
@@ -241,12 +230,9 @@ export default function Services() {
                     <ShieldAlert size={28} />
                   </div>
                   <div>
-                    <div className="inline-flex flex-wrap items-center gap-2 mb-1">
+                    <div className="inline-flex items-center gap-2 mb-1">
                       <span className="badge badge-alert font-mono">
-                        NON-SCOPE OF SERVICES
-                      </span>
-                      <span className="badge-telugu bg-orange-100 text-[#C2410C] border border-[#FED7AA]">
-                        లభించని వైద్య సేవలు
+                        STATUTORY NON-SCOPE PROCEDURES
                       </span>
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-[#9A3412]">
@@ -280,12 +266,9 @@ export default function Services() {
                           </span>
                         </div>
 
-                        <h3 className="text-xl font-bold text-[#7C2D12] mt-1 mb-0.5">
+                        <h3 className="text-xl font-bold text-[#7C2D12] mt-1 mb-2">
                           {item.title}
                         </h3>
-                        <div className="text-xs font-telugu font-semibold text-[#C2410C] mb-3">
-                          {item.teluguTitle}
-                        </div>
 
                         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
                           {item.description}
@@ -346,9 +329,6 @@ export default function Services() {
             <div className="pr-10 mb-6">
               <div className="inline-flex items-center gap-2 mb-2">
                 <span className="badge badge-navy">AVAILABLE CLINICAL SERVICE</span>
-                <span className="text-xs font-telugu font-semibold px-2 py-0.5 rounded bg-orange-50 text-[#F36B16]">
-                  {selectedService.teluguTitle}
-                </span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#142F80]">
                 {selectedService.title}

@@ -56,7 +56,6 @@ export default function About() {
               <ScrollReveal animation="fade-right" duration={700}>
                 <SectionHeading
                   badge="OUR STORY & PHILOSOPHY"
-                  badgeTelugu="మా ప్రస్థానం"
                   title="Dedicated to Protecting"
                   highlight="Your Sight"
                   subtitle="RV Superspeciality Eye Care was established with a clear mandate: to make high-quality, ethical, and modern ophthalmic care accessible, transparent, and patient-centered."
@@ -132,7 +131,6 @@ export default function About() {
           <ScrollReveal animation="fade-up" duration={700}>
             <SectionHeading
               badge="PURPOSE & VALUES"
-              badgeTelugu="లక్ష్యం & ధ్యేయం"
               title="Our Guiding"
               highlight="Vision & Mission"
               subtitle="The core principles that shape our clinical decisions, staff conduct, and daily patient interactions."
@@ -208,7 +206,6 @@ export default function About() {
           <ScrollReveal animation="fade-up" duration={700}>
             <SectionHeading
               badge="CLINICAL METHODOLOGY"
-              badgeTelugu="మా చికిత్సా విధానం"
               title="Our Approach to"
               highlight="Patient Care"
               subtitle="How we structure your clinical consultation to ensure accuracy, comfort, and informed decision-making."

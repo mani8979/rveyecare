@@ -38,13 +38,9 @@ export default function Blogs() {
               PATIENT EDUCATION & AWARENESS
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
               Eye Health & Wellness Library
             </h1>
-
-            <div className="text-xl font-telugu text-[#F36B16] font-semibold mb-4">
-              కంటి ఆరోగ్యం - అవగాహనా వ్యాసాలు
-            </div>
 
             <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mx-auto mb-8">
               Empowering patients with reliable, evidence-informed knowledge on common vision disorders, preventive screening, and daily eye protection.

@@ -30,13 +30,9 @@ export default function Appointment() {
             ONLINE CONSULTATION BOOKING
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
             Book an Eye Consultation
           </h1>
-
-          <div className="text-xl font-telugu text-[#F36B16] font-semibold mb-4">
-            కంటి పరీక్ష కోసం అపాయింట్‌మెంట్ బుక్ చేసుకోండి
-          </div>
 
           <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mx-auto">
             Schedule an appointment with our ophthalmic specialists. Prompt consultation slots with verified scope procedures.
@@ -70,7 +66,7 @@ export default function Appointment() {
                   {availableServices.map((svc) => (
                     <li key={svc.id} className="flex items-center justify-between py-1 border-b border-gray-50 last:border-0">
                       <span className="font-semibold text-gray-800">{svc.title}</span>
-                      <span className="font-telugu text-[11px] text-gray-400">{svc.teluguTitle}</span>
+                      <span className="text-[11px] text-[#16803C] font-semibold">Available</span>
                     </li>
                   ))}
                 </ul>
@@ -86,9 +82,9 @@ export default function Appointment() {
                   The following 3 services are <strong>NOT offered</strong> at RV Superspeciality Eye Care:
                 </p>
                 <div className="space-y-1 text-xs text-[#9A3412] font-semibold">
-                  <div>&times; Eye Bank (ఐ బ్యాంక్)</div>
-                  <div>&times; Squint Surgery (స్క్వింట్ సర్జరీ)</div>
-                  <div>&times; Vitreoretinal Surgery (విట్రో రెటినల్ సర్జరీ)</div>
+                  <div>&times; Eye Bank</div>
+                  <div>&times; Squint Surgery</div>
+                  <div>&times; Vitreoretinal Surgery</div>
                 </div>
                 <div className="mt-3 pt-2 border-t border-orange-200">
                   <Link to="/services#non-scope" className="text-xs font-bold text-[#C2410C] hover:underline inline-flex items-center gap-1">
@@ -129,10 +125,10 @@ export default function Appointment() {
                   Call our hospital front desk for same-day walk-in guidance or emergency assistance.
                 </p>
                 <a
-                  href="tel:+919876543210"
-                  className="btn btn-primary btn-sm w-full font-bold"
+                  href="tel:+918523815336"
+                  className="btn btn-primary btn-sm w-full font-bold justify-center"
                 >
-                  Call +91 98765 43210
+                  Call +91 85238 15336
                 </a>
               </div>
 

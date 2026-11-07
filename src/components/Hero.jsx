@@ -25,14 +25,10 @@ export default function Hero() {
           <div className="flex flex-col items-start justify-center">
             
             {/* Small Label Badge */}
-            <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDF3FC] border border-[#CBD9F5] mb-5 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDF3FC] border border-[#CBD9F5] mb-5 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-[#F36B16] animate-pulse flex-shrink-0" />
-              <span className="text-xs font-bold tracking-wider text-[#142F80] uppercase whitespace-nowrap">
-                ADVANCED EYE CARE
-              </span>
-              <span className="text-gray-300 hidden xs:inline">|</span>
-              <span className="badge-telugu bg-white/95 text-[#F36B16] border border-orange-100 py-0.5 px-3">
-                లభించు వైద్య సేవలు
+              <span className="text-xs font-bold tracking-wider text-[#142F80] uppercase">
+                ADVANCED EYE CARE &bull; SUPER-SPECIALITY SERVICES
               </span>
             </div>
 
@@ -184,8 +180,8 @@ export default function Hero() {
                 <span className="text-xs font-bold text-[#142F80] block">
                   Scope Compliant
                 </span>
-                <span className="text-[11px] text-gray-500 font-telugu">
-                  ఆప్తమాలజీ సేవలు
+                <span className="text-[11px] text-gray-500">
+                  Comprehensive Eye Care
                 </span>
               </div>
             </div>
