@@ -121,6 +121,10 @@ export default function Home() {
                   <img 
                     src="/images/about-hospital.jpg" 
                     alt="RV Superspeciality Eye Care Facility" 
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-[400px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -392,6 +396,10 @@ export default function Home() {
                   <img 
                     src="/images/about-care.jpg" 
                     alt="Patient Experience at RV Superspeciality Eye Care" 
+                    width={600}
+                    height={420}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-[420px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

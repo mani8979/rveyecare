@@ -71,6 +71,9 @@ export default function BlogDetails() {
               <img
                 src={blog.image}
                 alt={blog.title}
+                width={800}
+                height={420}
+                decoding="async"
                 className="w-full h-[360px] sm:h-[420px] object-cover"
               />
             </div>
@@ -175,6 +178,10 @@ export default function BlogDetails() {
                     <img
                       src={rel.image}
                       alt={rel.title}
+                      width={64}
+                      height={64}
+                      loading="lazy"
+                      decoding="async"
                       className="w-16 h-16 rounded-xl object-cover flex-shrink-0 group-hover:opacity-90 transition-opacity"
                     />
                     <div>

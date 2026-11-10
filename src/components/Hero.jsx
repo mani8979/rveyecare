@@ -127,6 +127,10 @@ export default function Hero() {
               <img
                 src="/images/hero-doctor.jpg"
                 alt="RV Superspeciality Eye Care - Doctor performing precision eye examination"
+                width={600}
+                height={520}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-[420px] sm:h-[480px] lg:h-[520px] object-cover object-top"
                 loading="eager"
               />

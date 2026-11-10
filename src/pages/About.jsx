@@ -94,19 +94,27 @@ export default function About() {
             {/* Right 6 cols: Hospital Images */}
             <div className="lg:col-span-6">
               <ScrollReveal animation="fade-left" duration={700}>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-2xl overflow-hidden shadow-md">
+                <div className="grid grid-cols-2 gap-4 items-stretch">
+                  <div className="rounded-2xl overflow-hidden shadow-md h-56 sm:h-64 bg-gray-100">
                     <img 
                       src="/images/about-hospital.jpg" 
                       alt="RV Superspeciality Eye Care Facility" 
-                      className="w-full h-64 object-cover"
+                      width={300}
+                      height={256}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="rounded-2xl overflow-hidden shadow-md pt-6">
+                  <div className="rounded-2xl overflow-hidden shadow-md h-56 sm:h-64 bg-gray-100">
                     <img 
                       src="/images/gallery-consultation.jpg" 
                       alt="Consultation Chambers" 
-                      className="w-full h-64 object-cover"
+                      width={300}
+                      height={256}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>

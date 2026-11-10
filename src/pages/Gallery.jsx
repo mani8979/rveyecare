@@ -90,6 +90,9 @@ export default function Gallery() {
                   <img
                     src={item.image}
                     alt={item.title}
+                    width={400}
+                    height={288}
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />

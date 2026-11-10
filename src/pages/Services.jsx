@@ -133,6 +133,9 @@ export default function Services() {
                       <img 
                         src={svc.image} 
                         alt={svc.title} 
+                        width={400}
+                        height={208}
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -431,6 +434,9 @@ export default function Services() {
               <img 
                 src="/rv-services-poster.jpg" 
                 alt="RV Superspeciality Eye Care Scope of Services Poster" 
+                width={800}
+                height={1000}
+                decoding="async"
                 className="w-full h-auto object-contain"
               />
             </div>

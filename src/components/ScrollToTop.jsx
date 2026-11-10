@@ -21,17 +21,21 @@ export default function ScrollToTop() {
     }
   }, [pathname, hash]);
 
-  // Monitor scroll position for button visibility
+  // Monitor scroll position for button visibility with rAF and passive listener
   useEffect(() => {
+    let ticking = false;
     const checkScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 300;
+          setShowScrollTop((prev) => (prev !== isScrolled ? isScrolled : prev));
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('scroll', checkScroll, { passive: true });
     return () => window.removeEventListener('scroll', checkScroll);
   }, []);
 
@@ -39,14 +43,17 @@ export default function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  if (!showScrollTop) return null;
-
   return (
     <button
       type="button"
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-[#142F80] hover:bg-[#F36B16] text-white shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none"
+      className={`fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-[#142F80] hover:bg-[#F36B16] text-white shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none ${
+        showScrollTop 
+          ? 'opacity-100 pointer-events-auto translate-y-0' 
+          : 'opacity-0 pointer-events-none translate-y-3'
+      }`}
       aria-label="Scroll back to top"
+      tabIndex={showScrollTop ? 0 : -1}
     >
       <ArrowUp size={20} />
     </button>

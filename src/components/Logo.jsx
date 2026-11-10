@@ -24,12 +24,16 @@ export default function Logo({
       <img 
         src="/rv-header-logo.png" 
         alt="RV Superspeciality Eye Care - Right Place For Your Bright Vision" 
+        width={285}
+        height={84}
+        style={{ aspectRatio: '794 / 234' }}
         className={`${
           isLight 
             ? 'h-12 sm:h-14 md:h-16 w-auto object-contain' 
-            : 'h-14 sm:h-17 md:h-20 lg:h-[84px] w-auto object-contain'
+            : 'h-14 sm:h-16 md:h-20 lg:h-[84px] w-auto object-contain'
         }`}
         loading="eager"
+        decoding="async"
       />
     </Link>
   );

@@ -88,6 +88,10 @@ export default function Doctors() {
                       <img 
                         src={doc.image} 
                         alt={doc.name} 
+                        width={112}
+                        height={112}
+                        loading="lazy"
+                        decoding="async"
                         className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover object-top border-2 border-[#142F80]/15 shadow-sm flex-shrink-0"
                       />
 

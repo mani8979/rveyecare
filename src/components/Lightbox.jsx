@@ -69,6 +69,7 @@ export default function Lightbox({
         <img
           src={currentImage.image}
           alt={currentImage.title}
+          decoding="async"
           className="max-h-[70vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
         />
 

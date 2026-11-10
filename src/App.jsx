@@ -20,7 +20,7 @@ import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#202638] w-full max-w-full overflow-x-hidden relative">
+    <div className="min-h-screen flex flex-col bg-white text-[#202638] w-full max-w-full relative" style={{ overflowX: 'clip' }}>
       {/* Scroll restoration helper */}
       <ScrollToTop />
 
@@ -31,7 +31,7 @@ export default function App() {
       <Header />
 
       {/* Primary Page Content */}
-      <main className="flex-1 w-full max-w-full overflow-x-hidden">
+      <main className="flex-1 w-full max-w-full" style={{ overflowX: 'clip' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

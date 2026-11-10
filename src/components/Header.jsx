@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X, Calendar, Phone, ArrowRight, ShieldAlert, Sparkles, MapPin } from 'lucide-react';
 import Logo from './Logo';
@@ -9,8 +10,13 @@ export default function Header() {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const dropdownRef = useRef(null);
   const location = useLocation();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close menus on route change
   useEffect(() => {
@@ -44,16 +50,20 @@ export default function Header() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Handle sticky shadow on scroll
+  // Handle sticky shadow on scroll with requestAnimationFrame and passive listener
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 20;
+          setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -79,11 +89,12 @@ export default function Header() {
   ];
 
   return (
-    <header 
-      className={`sticky top-0 z-40 bg-white transition-all duration-300 ${
-        scrolled ? 'shadow-md border-b border-gray-100' : 'border-b border-[#E3E9F4]'
-      }`}
-    >
+    <>
+      <header 
+        className={`sticky top-0 z-40 bg-white transition-[box-shadow,border-color,background-color] duration-200 ${
+          scrolled ? 'shadow-md border-b border-gray-100' : 'border-b border-[#E3E9F4]'
+        }`}
+      >
       <div className="container">
         <div className="flex items-center justify-between min-h-[86px] sm:min-h-[96px] py-2">
           {/* Brand Logo */}
@@ -126,9 +137,9 @@ export default function Header() {
                     {servicesDropdownOpen && (
                       <div className="absolute top-full left-0 w-[380px] bg-white rounded-2xl shadow-2xl border border-[#E3E9F4] p-3.5 mt-1 animate-fadeIn z-50">
                         {/* Header Badge Row */}
-                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-3 pb-2.5 border-b border-gray-100 mb-2 flex items-center justify-between">
-                          <span>AVAILABLE SCOPE OF SERVICES</span>
-                          <span className="text-[10px] text-[#16803C] bg-[#E8F8F0] px-2 py-0.5 rounded-full font-bold">
+                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-3 pb-2.5 border-b border-gray-100 mb-2 flex items-center justify-between gap-2">
+                          <span className="truncate">AVAILABLE SCOPE OF SERVICES</span>
+                          <span className="text-[10px] text-[#16803C] bg-[#E8F8F0] px-2.5 py-0.5 rounded-full font-bold whitespace-nowrap flex-shrink-0">
                             6 SERVICES
                           </span>
                         </div>
@@ -229,8 +240,10 @@ export default function Header() {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* MOBILE SLIDE-IN DRAWER (Comes from Left to Right - Mobile View Only) */}
+    {/* MOBILE SLIDE-IN DRAWER (Rendered via Portal to Document Body - Full Screen Viewport) */}
+    {mounted && createPortal(
       <div className="lg:hidden">
         {/* Dark Backdrop Overlay */}
         <div 
@@ -243,14 +256,14 @@ export default function Header() {
 
         {/* Off-Canvas Drawer Sliding in from Left to Right */}
         <aside 
-          className={`fixed top-0 left-0 bottom-0 w-[88%] max-w-[360px] bg-white z-50 shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-in-out transform ${
+          className={`fixed inset-y-0 left-0 h-full h-[100dvh] w-[88%] max-w-[360px] bg-white z-50 shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-in-out transform ${
             mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
           aria-label="Mobile Navigation Menu"
           aria-hidden={!mobileMenuOpen}
         >
           {/* Drawer Header: Logo on left, 'X' button on right */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-[#F8FAFD]">
+          <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-[#F8FAFD] flex-shrink-0">
             <Logo onClick={() => setMobileMenuOpen(false)} showTagline={false} />
             <button
               type="button"
@@ -263,7 +276,7 @@ export default function Header() {
           </div>
 
           {/* Drawer Body: Navigation Links */}
-          <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1.5">
+          <div className="flex-1 min-h-0 overflow-y-auto px-4 py-4 space-y-1.5">
             <div className="text-[10px] font-bold tracking-widest uppercase text-gray-400 px-3 pb-1">
               Menu Navigation
             </div>
@@ -286,7 +299,7 @@ export default function Header() {
                     >
                       <span className="flex items-center gap-2">
                         <span>{item.name}</span>
-                        <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2 py-0.5 rounded-full">
+                        <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
                           6 Services
                         </span>
                       </span>
@@ -302,9 +315,9 @@ export default function Header() {
                     {mobileServicesOpen && (
                       <div className="mt-2 mb-2 p-3.5 bg-white rounded-2xl border border-[#CBD9F5] shadow-md space-y-2 animate-fadeIn">
                         {/* Header Row */}
-                        <div className="flex items-center justify-between pb-2 border-b border-gray-100 text-[11px] font-bold text-gray-400 uppercase tracking-wider">
-                          <span>AVAILABLE SCOPE OF SERVICES</span>
-                          <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2 py-0.5 rounded-full">
+                        <div className="flex items-center justify-between gap-2 pb-2 border-b border-gray-100 text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+                          <span className="truncate">AVAILABLE SCOPE OF SERVICES</span>
+                          <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
                             6 SERVICES
                           </span>
                         </div>
@@ -387,7 +400,7 @@ export default function Header() {
           </div>
 
           {/* Drawer Footer: Actions & Emergency Contact */}
-          <div className="p-4 border-t border-gray-100 bg-[#F8FAFD] space-y-2.5">
+          <div className="p-4 border-t border-gray-100 bg-[#F8FAFD] space-y-2.5 flex-shrink-0">
             <Link
               to="/appointment"
               onClick={() => setMobileMenuOpen(false)}
@@ -420,7 +433,9 @@ export default function Header() {
             </div>
           </div>
         </aside>
-      </div>
-    </header>
+      </div>,
+      document.body
+    )}
+    </>
   );
 }

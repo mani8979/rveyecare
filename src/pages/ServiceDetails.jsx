@@ -142,6 +142,9 @@ export default function ServiceDetails() {
                     <img
                       src={service.image}
                       alt={`${service.title} - Clinical Consultation`}
+                      width={800}
+                      height={400}
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -334,11 +337,11 @@ export default function ServiceDetails() {
 
               {/* Other Scope Services Navigation */}
               <div className="card bg-white p-6 rounded-3xl border border-[#E3E9F4] shadow-xs">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between gap-2 mb-4">
                   <h4 className="text-base font-bold text-[#142F80]">
                     Other Scope Services
                   </h4>
-                  <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
                     6 Services
                   </span>
                 </div>

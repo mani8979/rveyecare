@@ -30,6 +30,9 @@ export default function ServiceCard({ service }) {
         <img 
           src={service.image} 
           alt={`${service.title} - RV Superspeciality Eye Care`} 
+          width={400}
+          height={200}
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
