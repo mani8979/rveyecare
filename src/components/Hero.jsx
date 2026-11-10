@@ -19,8 +19,8 @@ export default function Hero() {
 
       <div className="container relative z-10">
         
-        {/* Top: Given Text Content */}
-        <div className="max-w-3xl flex flex-col items-start justify-center">
+        {/* Top: Given Text Content (Centered) */}
+        <div className="max-w-3xl mx-auto flex flex-col items-center justify-center text-center">
           
           {/* Small Label Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDF3FC] border border-[#CBD9F5] mb-5 shadow-xs">
@@ -31,24 +31,25 @@ export default function Hero() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5.5xl text-[#111B33] tracking-tight leading-[1.12] mb-5">
+          <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5.5xl text-[#111B33] tracking-tight leading-[1.12] mb-5 text-center">
             Clear Vision.<br />
             <span className="text-[#F36B16]">Better Life.</span>
           </h1>
 
           {/* Tagline reminder badge */}
-          <p className="text-xs sm:text-sm font-bold tracking-widest text-[#142F80] uppercase mb-4 flex items-center gap-2">
+          <p className="text-xs sm:text-sm font-bold tracking-widest text-[#142F80] uppercase mb-4 flex items-center justify-center gap-2">
             <span className="h-[2px] w-6 bg-[#F36B16]" />
             RIGHT PLACE FOR YOUR BRIGHT VISION
+            <span className="h-[2px] w-6 bg-[#F36B16]" />
           </p>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-[#202638] leading-relaxed mb-8 max-w-xl">
+          <p className="text-base sm:text-lg text-[#202638] leading-relaxed mb-8 max-w-2xl mx-auto text-center">
             Experience comprehensive eye care with advanced diagnostic facilities, modern treatment technology and compassionate patient care.
           </p>
 
           {/* CTA Buttons */}
-          <div className="hero-cta-buttons flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
+          <div className="hero-cta-buttons flex flex-wrap items-center justify-center gap-4 mb-10 w-full sm:w-auto">
             <Link
               to="/appointment"
               className="btn btn-primary btn-lg shadow-md hover:shadow-orange"
@@ -67,14 +68,14 @@ export default function Hero() {
           </div>
 
           {/* Below the buttons: Three Trust Highlights */}
-          <div className="pt-6 border-t border-[#DDE5F4] w-full">
+          <div className="pt-6 border-t border-[#DDE5F4] w-full max-w-3xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3 bg-white/70 p-3 rounded-2xl border border-[#E3E9F4]/70 shadow-xs">
                 <div className="w-10 h-10 rounded-xl bg-white border border-[#E3E9F4] shadow-xs flex items-center justify-center text-[#142F80] flex-shrink-0">
                   <Eye size={20} className="text-[#F36B16]" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="text-sm font-bold text-[#142F80] leading-snug">
                     Advanced Eye Care
                   </h4>
@@ -84,11 +85,11 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3 bg-white/70 p-3 rounded-2xl border border-[#E3E9F4]/70 shadow-xs">
                 <div className="w-10 h-10 rounded-xl bg-white border border-[#E3E9F4] shadow-xs flex items-center justify-center text-[#142F80] flex-shrink-0">
                   <Microscope size={20} className="text-[#142F80]" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="text-sm font-bold text-[#142F80] leading-snug">
                     Modern Diagnostics
                   </h4>
@@ -98,11 +99,11 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3 bg-white/70 p-3 rounded-2xl border border-[#E3E9F4]/70 shadow-xs">
                 <div className="w-10 h-10 rounded-xl bg-white border border-[#E3E9F4] shadow-xs flex items-center justify-center text-[#142F80] flex-shrink-0">
                   <HeartPulse size={20} className="text-[#F36B16]" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="text-sm font-bold text-[#142F80] leading-snug">
                     Patient-Centred Care
                   </h4>

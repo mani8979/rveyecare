@@ -6,25 +6,6 @@
 export const doctorsData = [
   {
     id: 'doc-1',
-    name: 'Dr. Rachana',
-    designation: 'Consultant Ophthalmologist and Retina Specialist',
-    qualifications: 'MBBS, MS (Ophthalmology), Fellowship in Retina',
-    specialisation: 'Consultant Ophthalmologist and Retina Specialist',
-    experience: '10+ Years Clinical Experience',
-    registrationNo: 'State Medical Council Registered',
-    image: '/images/doctor-rachana.jpg',
-    timings: 'Monday – Saturday: 9:00 AM – 7:30 PM',
-    languages: 'English, Telugu, Hindi',
-    bio: 'Specialized in medical retina, fundus biomicroscopy, and comprehensive ophthalmic evaluations. Dedicated to early detection and management of diabetic retinopathy, macular disorders, and personalized patient counseling.',
-    areasOfFocus: [
-      'Medical Retina & Dilated Fundus Examination',
-      'Diabetic Retinopathy Screening & Care',
-      'Macular Health & Retinal Vascular Evaluation',
-      'Comprehensive Ophthalmology & General Eye Check-up'
-    ]
-  },
-  {
-    id: 'doc-2',
     name: 'Dr. Vishnu Vardhan Reddy',
     designation: 'Phaco Surgeon & Glaucoma Specialist',
     qualifications: 'MBBS, MS (Ophthalmology), Fellowship in Glaucoma',
@@ -40,6 +21,25 @@ export const doctorsData = [
       'Glaucoma Diagnostics & Applanation Tonometry',
       'Optic Nerve Head & Visual Field Analysis',
       'Precision Intraocular Lens (IOL) Assessment'
+    ]
+  },
+  {
+    id: 'doc-2',
+    name: 'Dr. Rachana',
+    designation: 'Consultant Ophthalmologist and Retina Specialist',
+    qualifications: 'MBBS, MS (Ophthalmology), Fellowship in Retina',
+    specialisation: 'Consultant Ophthalmologist and Retina Specialist',
+    experience: '10+ Years Clinical Experience',
+    registrationNo: 'State Medical Council Registered',
+    image: '/images/doctor-rachana.jpg',
+    timings: 'Monday – Saturday: 9:00 AM – 7:30 PM',
+    languages: 'English, Telugu, Hindi',
+    bio: 'Specialized in medical retina, fundus biomicroscopy, and comprehensive ophthalmic evaluations. Dedicated to early detection and management of diabetic retinopathy, macular disorders, and personalized patient counseling.',
+    areasOfFocus: [
+      'Medical Retina & Dilated Fundus Examination',
+      'Diabetic Retinopathy Screening & Care',
+      'Macular Health & Retinal Vascular Evaluation',
+      'Comprehensive Ophthalmology & General Eye Check-up'
     ]
   }
 ];
