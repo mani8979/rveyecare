@@ -64,7 +64,7 @@ export default function Services() {
                 href="#scope-list" 
                 className="btn btn-primary w-full sm:w-auto justify-center"
               >
-                <span>Explore Available Scope (6 Services)</span>
+                <span>Explore Available Scope</span>
               </a>
 
               <a 
@@ -99,7 +99,7 @@ export default function Services() {
                   <span className="badge badge-navy">COMPREHENSIVE OPHTHALMOLOGY</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111B33]">
-                  Available Scope of Services <span className="text-[#F36B16]">(6 Services)</span>
+                  Available Scope of Services
                 </h2>
                 <p className="text-sm sm:text-base text-gray-600 mt-1">
                   Verified clinical ophthalmology services provided on-site at RV Superspeciality Eye Care.

@@ -126,12 +126,12 @@ export default function Hero() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white max-w-md lg:max-w-none w-full">
               <img
                 src="/images/hero-doctor.jpg"
-                alt="RV Superspeciality Eye Care - Doctor performing precision eye examination"
+                alt="RV Superspeciality Eye Care - Dr. M. Vishnuvardhan Reddy performing clinical consultation"
                 width={600}
                 height={520}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-[420px] sm:h-[480px] lg:h-[520px] object-cover object-top"
+                className="w-full h-[420px] sm:h-[480px] lg:h-[520px] object-cover object-center"
                 loading="eager"
               />
               

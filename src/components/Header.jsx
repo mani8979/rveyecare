@@ -137,11 +137,8 @@ export default function Header() {
                     {servicesDropdownOpen && (
                       <div className="absolute top-full left-0 w-[380px] bg-white rounded-2xl shadow-2xl border border-[#E3E9F4] p-3.5 mt-1 animate-fadeIn z-50">
                         {/* Header Badge Row */}
-                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-3 pb-2.5 border-b border-gray-100 mb-2 flex items-center justify-between gap-2">
-                          <span className="truncate">AVAILABLE SCOPE OF SERVICES</span>
-                          <span className="text-[10px] text-[#16803C] bg-[#E8F8F0] px-2.5 py-0.5 rounded-full font-bold whitespace-nowrap flex-shrink-0">
-                            6 SERVICES
-                          </span>
+                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-3 pb-2.5 border-b border-gray-100 mb-2">
+                          <span>AVAILABLE SCOPE OF SERVICES</span>
                         </div>
 
                         {/* List of 6 Available Services */}
@@ -297,12 +294,7 @@ export default function Header() {
                       }`}
                       aria-expanded={mobileServicesOpen}
                     >
-                      <span className="flex items-center gap-2">
-                        <span>{item.name}</span>
-                        <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
-                          6 Services
-                        </span>
-                      </span>
+                      <span>{item.name}</span>
                       <ChevronDown 
                         size={18} 
                         className={`transition-transform duration-200 ${
@@ -315,11 +307,8 @@ export default function Header() {
                     {mobileServicesOpen && (
                       <div className="mt-2 mb-2 p-3.5 bg-white rounded-2xl border border-[#CBD9F5] shadow-md space-y-2 animate-fadeIn">
                         {/* Header Row */}
-                        <div className="flex items-center justify-between gap-2 pb-2 border-b border-gray-100 text-[11px] font-bold text-gray-400 uppercase tracking-wider">
-                          <span className="truncate">AVAILABLE SCOPE OF SERVICES</span>
-                          <span className="text-[10px] font-bold text-[#16803C] bg-[#E8F8F0] px-2.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
-                            6 SERVICES
-                          </span>
+                        <div className="pb-2 border-b border-gray-100 text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+                          <span>AVAILABLE SCOPE OF SERVICES</span>
                         </div>
 
                         {/* 6 Available Services List */}
