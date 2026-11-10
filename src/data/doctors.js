@@ -6,10 +6,10 @@
 export const doctorsData = [
   {
     id: 'doc-1',
-    name: 'Dr. R. Rachana',
-    designation: 'Consultant Ophthalmologist & Retina Specialist',
+    name: 'Dr. Rachana',
+    designation: 'Consultant Ophthalmologist and Retina Specialist',
     qualifications: 'MBBS, MS (Ophthalmology), Fellowship in Retina',
-    specialisation: 'Consultant Ophthalmologist & Retina Specialist',
+    specialisation: 'Consultant Ophthalmologist and Retina Specialist',
     experience: '10+ Years Clinical Experience',
     registrationNo: 'State Medical Council Registered',
     image: '/images/doctor-rachana.jpg',
@@ -25,7 +25,7 @@ export const doctorsData = [
   },
   {
     id: 'doc-2',
-    name: 'Dr. M. Vishnuvardhan Reddy',
+    name: 'Dr. Vishnu Vardhan Reddy',
     designation: 'Phaco Surgeon & Glaucoma Specialist',
     qualifications: 'MBBS, MS (Ophthalmology), Fellowship in Glaucoma',
     specialisation: 'Phaco Surgeon & Glaucoma Specialist',

@@ -126,7 +126,7 @@ export default function Hero() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white max-w-md lg:max-w-none w-full">
               <img
                 src="/images/hero-doctor.jpg"
-                alt="RV Superspeciality Eye Care - Dr. M. Vishnuvardhan Reddy performing clinical consultation"
+                alt="RV Superspeciality Eye Care - Dr. Vishnu Vardhan Reddy performing clinical consultation"
                 width={600}
                 height={520}
                 fetchPriority="high"
@@ -139,22 +139,16 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#142F80]/70 via-transparent to-transparent pointer-events-none" />
 
               {/* Bottom In-Image Info Bar */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center justify-between">
-                <div>
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#142F80]">
-                    <ShieldCheck size={16} className="text-[#F36B16]" />
-                    <span>RV Superspeciality Ophthalmology</span>
-                  </div>
-                  <span className="text-[11px] text-gray-500">
-                    Dedicated to protecting & restoring your sight
-                  </span>
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
+                  <ShieldCheck size={20} />
                 </div>
-                <div className="text-right">
-                  <span className="text-xs font-extrabold text-[#F36B16] block">
-                    6 Scope
-                  </span>
-                  <span className="text-[10px] text-gray-500 uppercase font-semibold">
-                    Services
+                <div>
+                  <div className="text-xs sm:text-sm font-bold text-[#142F80]">
+                    RV Superspeciality Ophthalmology
+                  </div>
+                  <span className="text-[11px] text-gray-500 block">
+                    Dedicated to protecting & restoring your sight
                   </span>
                 </div>
               </div>

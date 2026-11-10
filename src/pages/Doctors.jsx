@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   User, 
@@ -13,15 +13,9 @@ import {
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
-import { doctorsData, doctorSpecialities } from '../data/doctors';
+import { doctorsData } from '../data/doctors';
 
 export default function Doctors() {
-  const [selectedSpeciality, setSelectedSpeciality] = useState('All Specialities');
-
-  const filteredDoctors = selectedSpeciality === 'All Specialities'
-    ? doctorsData
-    : doctorsData.filter(d => d.specialisation.toLowerCase().includes(selectedSpeciality.toLowerCase()));
-
   return (
     <div className="doctors-page overflow-hidden">
       
@@ -39,7 +33,7 @@ export default function Doctors() {
             </h1>
 
             <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mx-auto">
-              Experienced ophthalmic clinicians dedicated to accurate diagnosis, patient education, and compassionate treatment across all 6 core scope disciplines.
+              Experienced ophthalmic clinicians dedicated to accurate diagnosis, patient education, and compassionate treatment across specialized clinical disciplines.
             </p>
           </ScrollReveal>
         </div>
@@ -54,32 +48,14 @@ export default function Doctors() {
             <div className="p-4 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] flex items-start gap-3 max-w-4xl mx-auto mb-10 shadow-xs">
               <Info size={20} className="text-[#D97706] flex-shrink-0 mt-0.5" />
               <div className="text-xs text-[#92400E] leading-relaxed">
-                <strong>Consultation Advisory:</strong> Our medical team comprises qualified ophthalmologists and eye specialists specialized across our 6 core scope disciplines. Direct consultation slots are scheduled by appointment.
+                <strong>Consultation Advisory:</strong> Our medical team comprises qualified ophthalmologists and eye specialists specialized across clinical disciplines. Direct consultation slots are scheduled by appointment.
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            {doctorSpecialities.map((spec) => (
-              <button
-                key={spec}
-                type="button"
-                onClick={() => setSelectedSpeciality(spec)}
-                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
-                  selectedSpeciality === spec
-                    ? 'bg-[#142F80] text-white shadow-md'
-                    : 'bg-white text-gray-700 hover:bg-[#EDF3FC] border border-[#E3E9F4]'
-                }`}
-              >
-                {spec}
-              </button>
-            ))}
-          </div>
-
           {/* Doctors Grid with Staggered Scroll Fade */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {filteredDoctors.map((doc, idx) => (
+            {doctorsData.map((doc, idx) => (
               <ScrollReveal key={doc.id} animation="fade-up" delay={idx * 120} duration={650}>
                 <div className="card card-hover bg-white border border-[#E3E9F4] rounded-3xl overflow-hidden flex flex-col justify-between h-full">
                   <div>
@@ -96,13 +72,10 @@ export default function Doctors() {
                       />
 
                       <div>
-                        <span className="badge badge-orange text-[10px] mb-2 font-mono">
-                          Verified Scope Specialist
-                        </span>
-                        <h3 className="text-xl font-extrabold text-[#142F80] leading-tight">
+                        <h3 className="text-xl sm:text-2xl font-extrabold text-[#142F80] leading-tight">
                           {doc.name}
                         </h3>
-                        <p className="text-xs text-[#F36B16] font-bold mt-0.5">
+                        <p className="text-sm text-[#F36B16] font-bold mt-1">
                           {doc.designation}
                         </p>
                         <p className="text-xs text-gray-500 mt-1 font-mono">

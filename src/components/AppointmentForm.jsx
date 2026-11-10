@@ -305,7 +305,7 @@ Sent from RV Superspeciality Eye Care Website`;
                 Schedule an Eye Care Consultation
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-1">
-                Select from our 6 verified ophthalmic scope services.
+                Select from our verified ophthalmic scope services.
               </p>
             </div>
             <span className="badge badge-orange font-mono text-[11px]">
