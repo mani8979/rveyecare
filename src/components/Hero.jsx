@@ -12,7 +12,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#FFFFFF] via-[#F3F6FC] to-[#EDF3FC] pt-12 pb-20 md:py-24 border-b border-[#E3E9F4]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#FFFFFF] via-[#F3F6FC] to-[#EDF3FC] pt-4 pb-16 sm:pt-6 sm:pb-20 md:pt-8 md:pb-20 border-b border-[#E3E9F4]">
       {/* Subtle Background Decorative Blur / Circles */}
       <div className="absolute top-0 right-10 w-96 h-96 bg-[#142F80]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#F36B16]/5 rounded-full blur-2xl pointer-events-none" />
