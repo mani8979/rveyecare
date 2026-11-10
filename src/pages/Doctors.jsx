@@ -75,11 +75,8 @@ export default function Doctors() {
                         <h3 className="text-xl sm:text-2xl font-extrabold text-[#142F80] leading-tight">
                           {doc.name}
                         </h3>
-                        <p className="text-sm text-[#F36B16] font-bold mt-1">
+                        <p className="text-sm sm:text-base text-[#F36B16] font-bold mt-1">
                           {doc.designation}
-                        </p>
-                        <p className="text-xs text-gray-500 mt-1 font-mono">
-                          {doc.qualifications}
                         </p>
                       </div>
                     </div>
@@ -87,11 +84,11 @@ export default function Doctors() {
                     {/* Body Content */}
                     <div className="p-6 sm:p-7 space-y-4">
                       
-                      {/* Speciality & Experience */}
+                      {/* Qualifications & Experience */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-[#F8FAFD] p-3.5 rounded-xl border border-gray-100">
                         <div>
-                          <span className="text-gray-400 block font-semibold">Specialisation:</span>
-                          <strong className="text-gray-800">{doc.specialisation}</strong>
+                          <span className="text-gray-400 block font-semibold">Qualifications:</span>
+                          <strong className="text-gray-800">{doc.qualifications}</strong>
                         </div>
                         <div>
                           <span className="text-gray-400 block font-semibold">Clinical Experience:</span>

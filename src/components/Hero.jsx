@@ -5,7 +5,6 @@ import {
   ArrowRight, 
   Eye, 
   ShieldCheck, 
-  Award, 
   CheckCircle,
   Microscope,
   HeartPulse
@@ -145,10 +144,10 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="text-xs sm:text-sm font-bold text-[#142F80]">
-                    RV Superspeciality Ophthalmology
+                    Dr. Vishnu Vardhan Reddy
                   </div>
-                  <span className="text-[11px] text-gray-500 block">
-                    Dedicated to protecting & restoring your sight
+                  <span className="text-[11px] text-[#F36B16] font-semibold block">
+                    Phaco Surgeon & Glaucoma Specialist
                   </span>
                 </div>
               </div>
@@ -165,21 +164,6 @@ export default function Hero() {
                 </span>
                 <span className="text-[11px] text-gray-500">
                   Transparent clinical guidance
-                </span>
-              </div>
-            </div>
-
-            {/* Floating Trust Card 2 - Bottom Right */}
-            <div className="absolute bottom-4 right-4 sm:bottom-16 md:-right-6 bg-white p-3.5 rounded-2xl shadow-xl border border-[#E3E9F4] hidden lg:flex items-center gap-3 max-w-[220px] animate-fadeIn">
-              <div className="w-10 h-10 rounded-xl bg-[#EDF3FC] flex items-center justify-center text-[#142F80] flex-shrink-0">
-                <Award size={22} className="text-[#142F80]" />
-              </div>
-              <div className="leading-tight">
-                <span className="text-xs font-bold text-[#142F80] block">
-                  Scope Compliant
-                </span>
-                <span className="text-[11px] text-gray-500">
-                  Comprehensive Eye Care
                 </span>
               </div>
             </div>

@@ -13,7 +13,7 @@ export const doctorsData = [
     experience: '10+ Years Clinical Experience',
     registrationNo: 'State Medical Council Registered',
     image: '/images/doctor-rachana.jpg',
-    timings: 'Monday – Saturday: 9:00 AM – 2:00 PM',
+    timings: 'Monday – Saturday: 9:00 AM – 7:30 PM',
     languages: 'English, Telugu, Hindi',
     bio: 'Specialized in medical retina, fundus biomicroscopy, and comprehensive ophthalmic evaluations. Dedicated to early detection and management of diabetic retinopathy, macular disorders, and personalized patient counseling.',
     areasOfFocus: [
@@ -32,7 +32,7 @@ export const doctorsData = [
     experience: '12+ Years Clinical Experience',
     registrationNo: 'State Medical Council Registered',
     image: '/images/doctor-vishnuvardhan.jpg',
-    timings: 'Monday – Saturday: 2:00 PM – 7:30 PM',
+    timings: 'Monday – Saturday: 9:00 AM – 7:30 PM',
     languages: 'English, Telugu, Hindi',
     bio: 'Experienced phacoemulsification cataract surgeon and glaucoma specialist dedicated to precision diagnostic tonometry, optic nerve head analysis, visual field assessment, and modern intraocular lens counseling.',
     areasOfFocus: [
