@@ -11,6 +11,7 @@ import {
   BookOpen 
 } from 'lucide-react';
 import { blogsData } from '../data/blogs';
+import SEO from '../components/SEO';
 
 export default function BlogDetails() {
   const { id } = useParams();
@@ -23,8 +24,38 @@ export default function BlogDetails() {
   // Related articles (excluding current)
   const relatedBlogs = blogsData.filter((b) => b.id !== blog.id).slice(0, 3);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "headline": blog.title,
+    "description": blog.excerpt,
+    "image": blog.image ? `https://rveyehospital.com${blog.image}` : "https://rveyehospital.com/rv-logo-banner.jpg",
+    "author": {
+      "@type": "MedicalClinic",
+      "name": "RV Superspeciality Eye Care",
+      "url": "https://rveyehospital.com/"
+    },
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "RV Superspeciality Eye Care",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rveyehospital.com/rv-header-logo.png"
+      }
+    },
+    "mainEntityOfPage": `https://rveyehospital.com/blogs/${blog.id}`
+  };
+
   return (
     <div className="blog-details-page bg-[#F8FAFD] py-12 md:py-16">
+      <SEO
+        title={blog.title}
+        description={blog.excerpt}
+        path={`/blogs/${blog.id}`}
+        image={blog.image}
+        schema={articleSchema}
+        type="article"
+      />
       <div className="container">
         
         {/* Breadcrumb / Back Link */}

@@ -3,6 +3,7 @@ import { Maximize2, Camera, Info } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import Lightbox from '../components/Lightbox';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { galleryImages, galleryCategories } from '../data/gallery';
 
 export default function Gallery() {
@@ -30,6 +31,11 @@ export default function Gallery() {
 
   return (
     <div className="gallery-page overflow-hidden">
+      <SEO
+        title="Hospital Facilities & Diagnostic Gallery | Pendurthi, Vizag"
+        description="View photographs of RV Superspeciality Eye Care facilities in Pendurthi: modern slit-lamp examination suites, consultation rooms, and optical centre."
+        path="/gallery"
+      />
       
       {/* Page Header */}
       <section className="bg-gradient-to-br from-[#142F80] via-[#0E2364] to-[#0A1A4A] text-white py-16 md:py-20 relative overflow-hidden">

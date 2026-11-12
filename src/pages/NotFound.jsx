@@ -2,11 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Eye, Home, Calendar, Phone, ArrowRight } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
+import SEO from '../components/SEO';
 import { availableServices } from '../data/services';
 
 export default function NotFound() {
   return (
     <div className="not-found-page py-20 bg-[#F8FAFD] flex-1 flex items-center justify-center">
+      <SEO
+        title="404 - Page Not Found | RV Superspeciality Eye Care"
+        description="The requested page could not be found. Return to RV Superspeciality Eye Care homepage or explore our eye care services."
+        path="/404"
+      />
       <div className="container max-w-2xl text-center">
         <div className="w-20 h-20 rounded-3xl bg-[#EDF3FC] text-[#142F80] flex items-center justify-center mx-auto mb-6 shadow-sm border border-[#CBD9F5]">
           <Eye size={42} className="text-[#F36B16]" />

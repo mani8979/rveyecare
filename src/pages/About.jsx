@@ -17,10 +17,16 @@ import {
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 
 export default function About() {
   return (
     <div className="about-page overflow-hidden">
+      <SEO
+        title="About Us | Leading Eye Care Hospital in Pendurthi, Vizag"
+        description="Learn about RV Superspeciality Eye Care in Pendurthi, Visakhapatnam. Discover our clinical philosophy, patient-first eye diagnostics, and ophthalmic excellence."
+        path="/about"
+      />
       
       {/* Page Header */}
       <section className="bg-gradient-to-br from-[#142F80] via-[#0E2364] to-[#0A1A4A] text-white py-16 md:py-20 relative overflow-hidden">

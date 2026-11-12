@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { blogsData } from '../data/blogs';
 
 export default function Blogs() {
@@ -28,6 +29,11 @@ export default function Blogs() {
 
   return (
     <div className="blogs-page overflow-hidden">
+      <SEO
+        title="Eye Health Articles & Patient Education | RV Superspeciality Eye Care"
+        description="Read verified ophthalmology articles on cataracts, glaucoma, digital eye strain, diabetic eye care, and cornea health by RV Superspeciality Eye Care doctors."
+        path="/blogs"
+      />
       
       {/* Page Header */}
       <section className="bg-gradient-to-br from-[#142F80] via-[#0E2364] to-[#0A1A4A] text-white py-16 md:py-20 relative overflow-hidden">

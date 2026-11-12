@@ -21,6 +21,7 @@ import {
 import SectionHeading from '../components/SectionHeading';
 import SymptomGuide from '../components/SymptomGuide';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { availableServices, nonScopeServices } from '../data/services';
 
 const iconMap = {
@@ -38,6 +39,11 @@ export default function Services() {
 
   return (
     <div className="services-page overflow-hidden">
+      <SEO
+        title="Our Eye Care Services | Cataract, Glaucoma & Retina in Pendurthi, Vizag"
+        description="Explore official eye care services at RV Superspeciality Eye Care in Pendurthi: General Check-up, Cataract evaluation, Glaucoma, Cornea, Medical Retina & Opticals."
+        path="/services"
+      />
       
       {/* Page Header / Hero Banner */}
       <section className="bg-gradient-to-br from-[#142F80] via-[#0E2364] to-[#0A1A4A] text-white py-16 md:py-20 relative overflow-hidden">

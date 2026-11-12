@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://rveyehospital.com/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rveyehospital.com/rv-header-logo.png</image:loc>
+      <image:title>RV Superspeciality Eye Care Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rveyehospital.com/images/Modern%20Ophthalmology%20Clinic%20Examination.png</image:loc>
+      <image:title>RV Superspeciality Eye Care Modern Ophthalmology Clinic Examination</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://rveyehospital.com/about</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Directory -->
+  <url>
+    <loc>https://rveyehospital.com/services</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Details -->
+  <url>
+    <loc>https://rveyehospital.com/services/general-eye-checkup</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/services/cataract-services</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/services/cornea-services</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/services/glaucoma-services</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/services/medical-retina-services</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/services/opticals</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Doctors Directory -->
+  <url>
+    <loc>https://rveyehospital.com/doctors</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rveyehospital.com/images/doctor-vishnuvardhan.jpg</image:loc>
+      <image:title>Dr. Vishnu Vardhan Reddy - Phaco Surgeon and Glaucoma Specialist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rveyehospital.com/images/doctor-rachana.jpg</image:loc>
+      <image:title>Dr. Rachana - Consultant Ophthalmologist and Retina Specialist</image:title>
+    </image:image>
+  </url>
+
+  <!-- Facility Gallery -->
+  <url>
+    <loc>https://rveyehospital.com/gallery</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blogs Index -->
+  <url>
+    <loc>https://rveyehospital.com/blogs</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://rveyehospital.com/blogs/understanding-cataracts</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/blogs/importance-of-regular-eye-checkups</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/blogs/glaucoma-awareness-silent-thief</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/blogs/common-causes-of-blurry-vision</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/blogs/protecting-eyes-from-digital-strain</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://rveyehospital.com/blogs/understanding-cornea-health</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Contact & Directions -->
+  <url>
+    <loc>https://rveyehospital.com/contact</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Appointment Booking -->
+  <url>
+    <loc>https://rveyehospital.com/appointment</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function Contact() {
@@ -97,6 +98,11 @@ export default function Contact() {
 
   return (
     <div className="contact-page overflow-hidden">
+      <SEO
+        title="Contact Us & Hospital Location | Pendurthi, Visakhapatnam"
+        description="Visit RV Superspeciality Eye Care on Araku Road, Ratnagiri Nagar, Pendurthi, Visakhapatnam. Get Google Maps directions, OPD timings, and helpline contact info."
+        path="/contact"
+      />
       
       {/* Page Header */}
       <section className="bg-gradient-to-br from-[#142F80] via-[#0E2364] to-[#0A1A4A] text-white py-16 md:py-20 relative overflow-hidden">

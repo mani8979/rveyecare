@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import AppointmentForm from '../components/AppointmentForm';
+import SEO from '../components/SEO';
 import { availableServices } from '../data/services';
 
 export default function Appointment() {
@@ -21,6 +22,11 @@ export default function Appointment() {
 
   return (
     <div className="appointment-page">
+      <SEO
+        title="Book an Eye Consultation Online | Pendurthi, Visakhapatnam"
+        description="Schedule an appointment at RV Superspeciality Eye Care in Pendurthi, Visakhapatnam. Quick online booking for cataract, glaucoma, retina & eye checkups."
+        path="/appointment"
+      />
       
       {/* Page Header */}
       <section className="bg-gradient-to-br from-[#142F80] via-[#0E2364] to-[#0A1A4A] text-white py-14 md:py-18 relative overflow-hidden">

@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { availableServices, nonScopeServices } from '../data/services';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 
 const iconMap = {
   Eye: Eye,
@@ -47,6 +48,11 @@ export default function ServiceDetails() {
   if (!service) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center py-20 px-4 bg-white">
+        <SEO
+          title="Service Not Found | RV Superspeciality Eye Care"
+          description="The requested eye care service was not found. Browse our available ophthalmology services in Pendurthi, Visakhapatnam."
+          path={`/services/${slug}`}
+        />
         <div className="text-center max-w-md">
           <div className="w-16 h-16 rounded-2xl bg-orange-50 text-[#F36B16] flex items-center justify-center mx-auto mb-4">
             <AlertCircle size={32} />
@@ -67,8 +73,36 @@ export default function ServiceDetails() {
   const IconComponent = iconMap[service.iconName] || Eye;
   const otherServices = availableServices.filter((s) => s.id !== service.id);
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": service.title,
+    "description": service.shortDescription || service.overview,
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RV Superspeciality Eye Care",
+      "url": "https://rveyehospital.com/",
+      "telephone": "+918523815336",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Araku - Srungavarapukota Road, Ratnagiri Nagar",
+        "addressLocality": "Pendurthi",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "530051",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <div className="bg-white">
+      <SEO
+        title={`${service.title} in Pendurthi, Vizag`}
+        description={`${service.shortDescription} Clinical diagnosis and care at RV Superspeciality Eye Care, Pendurthi, Visakhapatnam.`}
+        path={`/services/${service.slug}`}
+        image={service.image}
+        schema={serviceSchema}
+      />
       {/* HERO SECTION */}
       <section className="bg-gradient-to-b from-[#0B1C4D] via-[#142F80] to-[#1E3A8A] text-white pt-12 pb-16 relative overflow-hidden">
         {/* Background decorative aura */}

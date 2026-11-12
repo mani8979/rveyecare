@@ -22,11 +22,18 @@ import SectionHeading from '../components/SectionHeading';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialSlider from '../components/TestimonialSlider';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { availableServices } from '../data/services';
 
 export default function Home() {
   return (
     <div className="home-page overflow-hidden">
+      <SEO 
+        title="RV Superspeciality Eye Care | Eye Hospital in Pendurthi, Vizag"
+        description="Looking for trusted eye care in Pendurthi, Visakhapatnam? RV Superspeciality Eye Care offers comprehensive eye checkups, cataract, glaucoma, cornea, retina and opticals."
+        path="/"
+      />
+
       {/* SECTION 1: HERO */}
       <Hero />
 

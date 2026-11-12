@@ -13,11 +13,39 @@ import {
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { doctorsData } from '../data/doctors';
 
 export default function Doctors() {
+  const doctorsSchema = {
+    "@context": "https://schema.org",
+    "@graph": doctorsData.map(doc => ({
+      "@type": "Physician",
+      "name": doc.name,
+      "jobTitle": doc.designation,
+      "description": doc.bio,
+      "image": `https://rveyehospital.com${doc.image}`,
+      "medicalSpecialty": "Ophthalmology",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "RV Superspeciality Eye Care",
+        "url": "https://rveyehospital.com/"
+      },
+      "availableService": doc.areasOfFocus.map(area => ({
+        "@type": "MedicalProcedure",
+        "name": area
+      }))
+    }))
+  };
+
   return (
     <div className="doctors-page overflow-hidden">
+      <SEO
+        title="Expert Eye Specialists & Ophthalmologists in Pendurthi | RV Eye Care"
+        description="Meet our experienced eye specialists at RV Superspeciality Eye Care, Pendurthi: Dr. Vishnu Vardhan Reddy (Phaco & Glaucoma) and Dr. Rachana (Retina Specialist)."
+        path="/doctors"
+        schema={doctorsSchema}
+      />
       
       {/* Page Header */}
       <section className="bg-gradient-to-br from-[#142F80] via-[#0E2364] to-[#0A1A4A] text-white py-16 md:py-20 relative overflow-hidden">
