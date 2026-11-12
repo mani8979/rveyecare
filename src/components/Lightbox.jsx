@@ -44,7 +44,7 @@ export default function Lightbox({
       >
         <div className="flex items-center gap-3">
           <span className="text-xs uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-white/20">
-            {currentImage.category}
+            {currentImage.title}
           </span>
           <span className="text-xs text-gray-300">
             {currentIndex + 1} of {images.length}
@@ -74,11 +74,8 @@ export default function Lightbox({
         />
 
         {/* Caption */}
-        <div className="mt-4 text-center max-w-xl">
+        <div className="mt-3 text-center max-w-xl">
           <h4 className="text-white font-bold text-lg">{currentImage.title}</h4>
-          {currentImage.description && (
-            <p className="text-gray-300 text-sm mt-1">{currentImage.description}</p>
-          )}
         </div>
       </div>
 

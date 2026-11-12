@@ -415,18 +415,75 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Interactive Google Map Embed */}
-                <div className="relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden border border-[#CBD9F5] shadow-inner bg-gray-100">
+                {/* Interactive Clickable Google Map Embed: Clicking anywhere on the map redirects to Google Maps */}
+                <div className="relative w-full h-[360px] sm:h-[420px] md:h-[480px] rounded-2xl overflow-hidden border border-[#CBD9F5] shadow-inner bg-slate-100 group">
+                  {/* Clean Loading & Fallback Placeholder underneath */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-slate-50 text-slate-500 pointer-events-none z-0">
+                    <MapPin className="text-[#F36B16] animate-bounce mb-2" size={32} />
+                    <span className="font-bold text-sm text-[#142F80]">RV Superspeciality Eye Care</span>
+                    <span className="text-xs text-gray-500 mt-1 max-w-xs">
+                      Araku - Srungavarapukota Road, Ratnagiri Nagar, Pendurthi, Visakhapatnam – 530051
+                    </span>
+                  </div>
+
+                  {/* Visual Map Render (pointer-events-none ensures clicks pass cleanly to parent anchor) */}
                   <iframe
                     title="RV Superspeciality Eye Care Location"
-                    src="https://maps.google.com/maps?q=17.8033596,83.2092257&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.802319087405!2d83.2066507759495!3d17.803359589632873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3967437b24e9bb%3A0x98714ec42492ed93!2sRV%20SUPERSPECIALITY%20EYE%20CARE!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    className="absolute inset-0 w-full h-full border-0 block z-10 pointer-events-none"
+                    style={{ border: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   />
+
+                  {/* Click/Tap Overlay: Tapping anywhere on the map opens the Google Maps place listing */}
+                  <a
+                    href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 z-20 cursor-pointer flex flex-col justify-between p-3.5 sm:p-5 transition-all duration-200 group-hover:bg-[#142F80]/5 focus:outline-none focus:ring-2 focus:ring-[#F36B16]"
+                    aria-label="Click anywhere on the map to open RV Superspeciality Eye Care in Google Maps"
+                    title="Click anywhere to open in Google Maps"
+                  >
+                    {/* Top Banner Badge */}
+                    <div className="self-start">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-xs text-[#142F80] font-bold text-xs shadow-md border border-[#CBD9F5] group-hover:bg-[#F36B16] group-hover:text-white transition-colors">
+                        <MapPin size={13} className="text-[#F36B16] group-hover:text-white" />
+                        <span>Tap anywhere to open in Google Maps &rarr;</span>
+                      </span>
+                    </div>
+
+                    {/* Center Hover Prompt for Desktop */}
+                    <div className="self-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:block">
+                      <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#142F80]/90 text-white font-bold text-xs shadow-xl backdrop-blur-xs">
+                        <ExternalLink size={14} />
+                        <span>Open Hospital in Google Maps Navigation</span>
+                      </span>
+                    </div>
+
+                    {/* Bottom spacer */}
+                    <div />
+                  </a>
+                </div>
+
+                {/* Mobile-Friendly Location Actions & Landmark Helper */}
+                <div className="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-600">
+                  <div className="flex items-center gap-1.5 font-medium">
+                    <span className="w-2 h-2 rounded-full bg-[#10B981] inline-block" />
+                    <span>Landmark: Near Indrani Function Hall / Pendurthi Junction</span>
+                  </div>
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
+                    <a
+                      href="https://www.google.com/maps/place/RV+SUPERSPECIALITY+EYE+CARE/@17.8033596,83.2092257,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3967437b24e9bb:0x98714ec42492ed93!8m2!3d17.8033596!4d83.2092257!16s%2Fg%2F11syxd8sfs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#F36B16] font-bold hover:underline inline-flex items-center gap-1"
+                    >
+                      <span>Open Location in Google Maps</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>

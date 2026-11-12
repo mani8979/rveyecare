@@ -79,18 +79,18 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Image Grid with Staggered Scroll Fade */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Image Grid with Staggered Scroll Fade: 2 columns on mobile (side by side), 3 on desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2.5 sm:gap-4 md:gap-6">
             {filteredImages.map((item, index) => (
               <ScrollReveal 
                 key={item.id} 
                 animation="fade-up" 
-                delay={(index % 3) * 100}
-                duration={650}
+                delay={(index % 3) * 60}
+                duration={500}
               >
                 <div
                   onClick={() => openLightbox(index)}
-                  className="group relative h-72 rounded-2xl overflow-hidden cursor-pointer bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+                  className="group relative h-40 sm:h-56 md:h-64 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer bg-gray-100 shadow-xs hover:shadow-xl transition-all duration-300"
                 >
                   {/* Image */}
                   <img
@@ -103,29 +103,19 @@ export default function Gallery() {
                     loading="lazy"
                   />
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                  {/* Subtle Vignette Overlay for Clear Badge Visibility */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/20 opacity-70 group-hover:opacity-85 transition-opacity" />
 
-                  {/* Top Category Badge */}
-                  <div className="absolute top-3 left-3">
-                    <span className="badge badge-navy text-[11px] bg-white/95 text-[#142F80] shadow-xs">
-                      {item.category}
+                  {/* Top-Left Name Badge: Compact, refined & perfectly placed without dominating mobile cards */}
+                  <div className="absolute top-2 left-2 sm:top-2.5 sm:left-2.5 z-20 max-w-[92%] pointer-events-none">
+                    <span className="inline-flex items-center px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg bg-white/95 text-[#142F80] text-[9.5px] sm:text-xs md:text-[13px] font-bold tracking-tight sm:tracking-normal shadow-xs border border-white/60 backdrop-blur-xs group-hover:bg-[#F36B16] group-hover:text-white transition-colors duration-200">
+                      {item.title}
                     </span>
                   </div>
 
-                  {/* Zoom Icon Hover Effect */}
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Maximize2 size={16} />
-                  </div>
-
-                  {/* Bottom Details */}
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="text-lg font-bold leading-tight mb-1 group-hover:text-[#F36B16] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-gray-300 line-clamp-2">
-                      {item.description}
-                    </p>
+                  {/* Zoom Icon Hover Effect on Top-Right */}
+                  <div className="absolute top-2 right-2 sm:top-2.5 sm:right-2.5 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-black/40 text-white hidden sm:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-md">
+                    <Maximize2 size={13} />
                   </div>
                 </div>
               </ScrollReveal>

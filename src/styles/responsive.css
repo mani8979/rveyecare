@@ -61,9 +61,14 @@
   }
 
   /* Prevent any media or block element from exceeding viewport width */
-  img, svg, iframe, table, pre, code {
+  img, svg, table, pre, code {
     max-width: 100% !important;
     height: auto;
+  }
+
+  /* Iframes should never inherit height: auto which collapses them to 150px default */
+  iframe {
+    max-width: 100% !important;
   }
 
   h1 { font-size: 1.95rem; }

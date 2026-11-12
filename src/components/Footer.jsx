@@ -28,7 +28,16 @@ export default function Footer() {
           {/* Column 1: Hospital Brand & Mission (4 cols) */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <Logo variant="light" />
+              <div 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="inline-block cursor-pointer"
+                title="Return to start of page"
+              >
+                <Logo 
+                  variant="light" 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+                />
+              </div>
               <p className="mt-4 text-sm text-gray-300 leading-relaxed max-w-sm">
                 RV Superspeciality Eye Care is committed to protecting and enhancing vision through advanced clinical diagnostics, modern ophthalmology treatments, and ethical, compassionate patient care.
               </p>
