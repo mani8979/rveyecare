@@ -33,6 +33,115 @@ export default function Home() {
       {/* SECTION 2: TRUST AND HIGHLIGHTS */}
       <section className="section section-sm bg-white border-b border-[#E3E9F4]">
         <div className="container">
+          
+          {/* Section Heading for Doctors */}
+          <ScrollReveal animation="fade-up" duration={700}>
+            <SectionHeading
+              badge="EXPERT OPHTHALMOLOGISTS"
+              title="Meet Our Experienced"
+              highlight="Doctors"
+              subtitle="Dedicated ophthalmic surgeons and retina specialists providing advanced eye diagnostics, surgical excellence, and compassionate patient care."
+              centered
+            />
+          </ScrollReveal>
+
+          {/* Doctor Cards at Top: Male First (Dr. Vishnu Vardhan Reddy), Female Second (Dr. Rachana) */}
+          <ScrollReveal animation="fade-up" duration={700}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mb-16 md:mb-20">
+              
+              {/* Card 1: Male Doctor - Dr. Vishnu Vardhan Reddy */}
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white w-full group">
+                <img
+                  src="/images/doctor-vishnuvardhan.jpg"
+                  alt="RV Superspeciality Eye Care - Dr. Vishnu Vardhan Reddy performing clinical consultation"
+                  width={600}
+                  height={520}
+                  decoding="async"
+                  className="w-full h-[380px] sm:h-[420px] md:h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
+                />
+                
+                {/* Subtle Gradient at Bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#142F80]/80 via-transparent to-transparent pointer-events-none" />
+
+                {/* Floating Trust Card - Top Left */}
+                <div className="absolute top-4 left-4 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-[#E3E9F4] hidden sm:flex items-center gap-2.5 max-w-[200px]">
+                  <div className="w-8 h-8 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
+                    <CheckCircle size={18} />
+                  </div>
+                  <div className="leading-tight">
+                    <span className="text-xs font-bold text-[#142F80] block">
+                      Ethical Practice
+                    </span>
+                    <span className="text-[10.5px] text-gray-500">
+                      Transparent clinical guidance
+                    </span>
+                  </div>
+                </div>
+
+                {/* Bottom In-Image Info Bar */}
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-sm font-bold text-[#142F80] truncate">
+                      Dr. Vishnu Vardhan Reddy
+                    </div>
+                    <span className="text-[11px] text-[#F36B16] font-semibold block truncate">
+                      Phaco Surgeon & Glaucoma Specialist
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Female Doctor - Dr. Rachana */}
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white w-full group">
+                <img
+                  src="/images/doctor-rachana.jpg"
+                  alt="RV Superspeciality Eye Care - Dr. Rachana performing retina consultation"
+                  width={600}
+                  height={520}
+                  decoding="async"
+                  className="w-full h-[380px] sm:h-[420px] md:h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
+                />
+                
+                {/* Subtle Gradient at Bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#142F80]/80 via-transparent to-transparent pointer-events-none" />
+
+                {/* Floating Trust Card - Top Left */}
+                <div className="absolute top-4 left-4 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-[#E3E9F4] hidden sm:flex items-center gap-2.5 max-w-[200px]">
+                  <div className="w-8 h-8 rounded-xl bg-[#EDF3FC] flex items-center justify-center text-[#142F80] flex-shrink-0">
+                    <CheckCircle size={18} className="text-[#142F80]" />
+                  </div>
+                  <div className="leading-tight">
+                    <span className="text-xs font-bold text-[#142F80] block">
+                      Retina Specialist
+                    </span>
+                    <span className="text-[10.5px] text-gray-500">
+                      Comprehensive eye care
+                    </span>
+                  </div>
+                </div>
+
+                {/* Bottom In-Image Info Bar */}
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-sm font-bold text-[#142F80] truncate">
+                      Dr. Rachana
+                    </div>
+                    <span className="text-[11px] text-[#F36B16] font-semibold block truncate">
+                      Consultant Ophthalmologist and Retina Specialist
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </ScrollReveal>
+
           <ScrollReveal animation="fade-up" duration={700}>
             <SectionHeading
               badge="EXCELLENCE IN VISION"

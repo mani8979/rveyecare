@@ -4,220 +4,133 @@ import {
   Calendar, 
   ArrowRight, 
   Eye, 
-  ShieldCheck, 
-  CheckCircle,
-  Microscope,
-  HeartPulse
+  Microscope, 
+  HeartPulse 
 } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#FFFFFF] via-[#F3F6FC] to-[#EDF3FC] pt-4 pb-16 sm:pt-6 sm:pb-20 md:pt-8 md:pb-20 border-b border-[#E3E9F4]">
-      {/* Subtle Background Decorative Blur / Circles */}
-      <div className="absolute top-0 right-10 w-96 h-96 bg-[#142F80]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#F36B16]/5 rounded-full blur-2xl pointer-events-none" />
+    <section 
+      className="relative overflow-hidden bg-white border-b border-[#E3E9F4] pt-6 pb-10 sm:pt-9 sm:pb-12 lg:pt-14 lg:pb-16 min-h-0 lg:min-h-[640px] flex items-center w-full"
+    >
+      {/* Desktop Background Image Layer (Active on desktop lg+ 1024px+, hidden on mobile/tablet < lg) */}
+      <div 
+        className="hidden lg:block absolute inset-0 bg-cover bg-no-repeat lg:bg-[position:right_center]"
+        style={{
+          backgroundImage: "url('/images/Modern%20Ophthalmology%20Clinic%20Examination.png')",
+        }}
+        aria-hidden="true"
+      >
+        {/* Subtle gradient overlay for desktop: protects text readability without washing out the photo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/10 to-transparent pointer-events-none" />
+      </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 w-full px-4 sm:px-6">
         
-        {/* Top: Given Text Content (Centered) */}
-        <div className="max-w-3xl mx-auto flex flex-col items-center justify-center text-center">
+        {/* Main Content Area (Text + Buttons) */}
+        <div className="w-full max-w-xl lg:max-w-[540px] xl:max-w-[580px] flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
           
           {/* Small Label Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EDF3FC] border border-[#CBD9F5] mb-5 shadow-xs">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#EDF3FC] border border-[#CBD9F5] mb-3.5 sm:mb-5 shadow-xs max-w-full min-w-0">
             <span className="w-2 h-2 rounded-full bg-[#F36B16] animate-pulse flex-shrink-0" />
-            <span className="text-xs font-bold tracking-wider text-[#142F80] uppercase">
+            <span className="text-[9.5px] xs:text-[10px] sm:text-xs font-bold tracking-normal sm:tracking-wider text-[#142F80] uppercase truncate min-w-0">
               ADVANCED EYE CARE &bull; SUPER-SPECIALITY SERVICES
             </span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5.5xl text-[#111B33] tracking-tight leading-[1.12] mb-5 text-center">
+          <h1 className="font-extrabold text-2xl xs:text-3xl sm:text-3.5xl md:text-4xl lg:text-[44px] xl:text-[48px] text-[#0E2364] tracking-tight leading-[1.15] mb-3 sm:mb-4 w-full">
             Clear Vision.<br />
             <span className="text-[#F36B16]">Better Life.</span>
           </h1>
 
-          {/* Tagline reminder badge */}
-          <p className="text-xs sm:text-sm font-bold tracking-widest text-[#142F80] uppercase mb-4 flex items-center justify-center gap-2">
-            <span className="h-[2px] w-6 bg-[#F36B16]" />
-            RIGHT PLACE FOR YOUR BRIGHT VISION
-            <span className="h-[2px] w-6 bg-[#F36B16]" />
+          {/* Tagline */}
+          <p className="text-[10.5px] xs:text-[11px] sm:text-xs md:text-sm font-bold tracking-normal sm:tracking-widest text-[#142F80] uppercase mb-3.5 sm:mb-4 flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2 max-w-full min-w-0">
+            <span className="h-[2px] w-3 sm:w-6 bg-[#F36B16] flex-shrink-0" />
+            <span className="text-center truncate min-w-0">RIGHT PLACE FOR YOUR BRIGHT VISION</span>
+            <span className="h-[2px] w-3 sm:w-6 bg-[#F36B16] flex-shrink-0" />
           </p>
 
-          {/* Description */}
-          <p className="text-base sm:text-lg text-[#202638] leading-relaxed mb-8 max-w-2xl mx-auto text-center">
+          {/* Description (occupies approximately two lines on desktop, clean readability on mobile) */}
+          <p className="text-sm sm:text-base lg:text-[17px] text-[#202638] leading-relaxed mb-6 sm:mb-7 lg:mb-8 max-w-[560px] w-full px-0">
             Experience comprehensive eye care with advanced diagnostic facilities, modern treatment technology and compassionate patient care.
           </p>
 
           {/* CTA Buttons */}
-          <div className="hero-cta-buttons flex flex-wrap items-center justify-center gap-4 mb-10 w-full sm:w-auto">
+          <div className="hero-cta-buttons flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
               to="/appointment"
-              className="btn btn-primary btn-lg shadow-md hover:shadow-orange"
+              className="btn btn-primary btn-lg shadow-md hover:shadow-orange flex items-center justify-center gap-2 text-sm sm:text-base px-6 sm:px-7 py-3.5 sm:py-3.5 w-full sm:w-auto transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 min-h-[48px]"
             >
-              <Calendar size={19} />
+              <Calendar size={18} />
               <span>Book an Appointment</span>
+              <ArrowRight size={17} />
             </Link>
 
             <Link
               to="/services"
-              className="btn btn-outline-navy btn-lg"
+              className="btn btn-outline-navy btn-lg bg-white/95 backdrop-blur-xs flex items-center justify-center gap-2 text-sm sm:text-base px-6 sm:px-7 py-3.5 sm:py-3.5 w-full sm:w-auto transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 min-h-[48px]"
             >
               <span>Explore Our Services</span>
-              <ArrowRight size={18} />
+              <ArrowRight size={17} />
             </Link>
-          </div>
-
-          {/* Below the buttons: Three Trust Highlights */}
-          <div className="pt-6 border-t border-[#DDE5F4] w-full max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              
-              <div className="flex items-center justify-center sm:justify-start gap-3 bg-white/70 p-3 rounded-2xl border border-[#E3E9F4]/70 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E3E9F4] shadow-xs flex items-center justify-center text-[#142F80] flex-shrink-0">
-                  <Eye size={20} className="text-[#F36B16]" />
-                </div>
-                <div className="text-left">
-                  <h4 className="text-sm font-bold text-[#142F80] leading-snug">
-                    Advanced Eye Care
-                  </h4>
-                  <span className="text-[11.5px] text-gray-500 block">
-                    Targeted clinical solutions
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-center sm:justify-start gap-3 bg-white/70 p-3 rounded-2xl border border-[#E3E9F4]/70 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E3E9F4] shadow-xs flex items-center justify-center text-[#142F80] flex-shrink-0">
-                  <Microscope size={20} className="text-[#142F80]" />
-                </div>
-                <div className="text-left">
-                  <h4 className="text-sm font-bold text-[#142F80] leading-snug">
-                    Modern Diagnostics
-                  </h4>
-                  <span className="text-[11.5px] text-gray-500 block">
-                    Precision examination
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-center sm:justify-start gap-3 bg-white/70 p-3 rounded-2xl border border-[#E3E9F4]/70 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E3E9F4] shadow-xs flex items-center justify-center text-[#142F80] flex-shrink-0">
-                  <HeartPulse size={20} className="text-[#F36B16]" />
-                </div>
-                <div className="text-left">
-                  <h4 className="text-sm font-bold text-[#142F80] leading-snug">
-                    Patient-Centred Care
-                  </h4>
-                  <span className="text-[11.5px] text-gray-500 block">
-                    Clear & gentle counseling
-                  </span>
-                </div>
-              </div>
-
-            </div>
           </div>
 
         </div>
 
-        {/* Down of Given Text: Both Male and Female Doctor Photos (Side by Side in Desktop, One by One in Mobile) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mt-10 md:mt-14">
-          
-          {/* Card 1: Male Doctor - Dr. Vishnu Vardhan Reddy */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white w-full">
-            <img
-              src="/images/hero-doctor.jpg"
-              alt="RV Superspeciality Eye Care - Dr. Vishnu Vardhan Reddy performing clinical consultation"
-              width={600}
-              height={520}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full h-[380px] sm:h-[440px] md:h-[460px] object-cover object-center"
-              loading="eager"
-            />
+        {/* Three Trust Highlights */}
+        <div className="w-full max-w-3xl lg:max-w-4xl mt-8 sm:mt-10 lg:mt-14 pt-0 sm:pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             
-            {/* Subtle Gradient at Bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#142F80]/75 via-transparent to-transparent pointer-events-none" />
-
-            {/* Floating Trust Card - Top Left */}
-            <div className="absolute top-4 left-4 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-[#E3E9F4] hidden sm:flex items-center gap-2.5 max-w-[200px] animate-fadeIn">
-              <div className="w-8 h-8 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
-                <CheckCircle size={18} />
+            {/* Card 1 */}
+            <div className="flex items-center justify-start gap-3.5 bg-white p-3.5 sm:p-4 rounded-2xl border border-[#E3E9F4] shadow-xs hover:shadow-md hover:border-[#142F80]/20 transition-all duration-300 transform hover:-translate-y-0.5">
+              <div className="w-10 h-10 rounded-xl bg-[#EDF3FC] border border-[#CBD9F5] shadow-xs flex items-center justify-center text-[#F36B16] flex-shrink-0">
+                <Eye size={20} className="text-[#F36B16]" />
               </div>
-              <div className="leading-tight">
-                <span className="text-xs font-bold text-[#142F80] block">
-                  Ethical Practice
-                </span>
-                <span className="text-[10.5px] text-gray-500">
-                  Transparent clinical guidance
+              <div className="text-left min-w-0 flex-1">
+                <h4 className="text-sm sm:text-[14px] font-bold text-[#142F80] leading-snug">
+                  Advanced Eye Care
+                </h4>
+                <span className="text-[11.5px] text-gray-500 font-medium block">
+                  Targeted clinical solutions
                 </span>
               </div>
             </div>
 
-            {/* Bottom In-Image Info Bar */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
-                <ShieldCheck size={20} />
+            {/* Card 2 */}
+            <div className="flex items-center justify-start gap-3.5 bg-white p-3.5 sm:p-4 rounded-2xl border border-[#E3E9F4] shadow-xs hover:shadow-md hover:border-[#142F80]/20 transition-all duration-300 transform hover:-translate-y-0.5">
+              <div className="w-10 h-10 rounded-xl bg-[#EDF3FC] border border-[#CBD9F5] shadow-xs flex items-center justify-center text-[#142F80] flex-shrink-0">
+                <Microscope size={20} className="text-[#142F80]" />
               </div>
-              <div className="min-w-0">
-                <div className="text-xs sm:text-sm font-bold text-[#142F80] truncate">
-                  Dr. Vishnu Vardhan Reddy
-                </div>
-                <span className="text-[11px] text-[#F36B16] font-semibold block truncate">
-                  Phaco Surgeon & Glaucoma Specialist
+              <div className="text-left min-w-0 flex-1">
+                <h4 className="text-sm sm:text-[14px] font-bold text-[#142F80] leading-snug">
+                  Modern Diagnostics
+                </h4>
+                <span className="text-[11.5px] text-gray-500 font-medium block">
+                  Precision examination
                 </span>
               </div>
             </div>
+
+            {/* Card 3 */}
+            <div className="flex items-center justify-start gap-3.5 bg-white p-3.5 sm:p-4 rounded-2xl border border-[#E3E9F4] shadow-xs hover:shadow-md hover:border-[#142F80]/20 transition-all duration-300 transform hover:-translate-y-0.5">
+              <div className="w-10 h-10 rounded-xl bg-[#FFF5EE] border border-[#FED7AA] shadow-xs flex items-center justify-center text-[#F36B16] flex-shrink-0">
+                <HeartPulse size={20} className="text-[#F36B16]" />
+              </div>
+              <div className="text-left min-w-0 flex-1">
+                <h4 className="text-sm sm:text-[14px] font-bold text-[#142F80] leading-snug">
+                  Patient-Centred Care
+                </h4>
+                <span className="text-[11.5px] text-gray-500 font-medium block">
+                  Clear & gentle counseling
+                </span>
+              </div>
+            </div>
+
           </div>
-
-          {/* Card 2: Female Doctor - Dr. Rachana */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white w-full">
-            <img
-              src="/images/doctor-rachana.jpg"
-              alt="RV Superspeciality Eye Care - Dr. Rachana performing retina consultation"
-              width={600}
-              height={520}
-              decoding="async"
-              className="w-full h-[380px] sm:h-[440px] md:h-[460px] object-cover object-center"
-              loading="eager"
-            />
-            
-            {/* Subtle Gradient at Bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#142F80]/75 via-transparent to-transparent pointer-events-none" />
-
-            {/* Floating Trust Card - Top Left */}
-            <div className="absolute top-4 left-4 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-[#E3E9F4] hidden sm:flex items-center gap-2.5 max-w-[200px] animate-fadeIn">
-              <div className="w-8 h-8 rounded-xl bg-[#EDF3FC] flex items-center justify-center text-[#142F80] flex-shrink-0">
-                <CheckCircle size={18} className="text-[#142F80]" />
-              </div>
-              <div className="leading-tight">
-                <span className="text-xs font-bold text-[#142F80] block">
-                  Retina Specialist
-                </span>
-                <span className="text-[10.5px] text-gray-500">
-                  Comprehensive eye care
-                </span>
-              </div>
-            </div>
-
-            {/* Bottom In-Image Info Bar */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-white/60 shadow-lg flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
-                <ShieldCheck size={20} />
-              </div>
-              <div className="min-w-0">
-                <div className="text-xs sm:text-sm font-bold text-[#142F80] truncate">
-                  Dr. Rachana
-                </div>
-                <span className="text-[11px] text-[#F36B16] font-semibold block truncate">
-                  Consultant Ophthalmologist and Retina Specialist
-                </span>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </section>
   );
 }
-
