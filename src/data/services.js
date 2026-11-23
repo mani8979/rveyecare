@@ -9,7 +9,7 @@ export const availableServices = [
     title: 'General Eye Check-up',
     slug: 'general-eye-checkup',
     iconName: 'Eye',
-    image: '/images/service-general.jpg',
+    image: '/images/service-general.webp',
     shortDescription: 'Comprehensive visual acuity assessment, refraction, slit-lamp bio-microscopy, and preventive ocular health evaluation.',
     overview: 'A routine comprehensive eye check-up is the foundation of preventive vision care. Many vision-threatening conditions develop silently without early symptoms. Our detailed examination screens your visual acuity, refractive status, anterior segment, and posterior ocular structures.',
     keyHighlights: [
@@ -33,14 +33,15 @@ export const availableServices = [
     title: 'Cataract Services',
     slug: 'cataract-services',
     iconName: 'Sun',
-    image: '/images/service-cataract.jpg',
+    image: '/images/service-cataract.webp',
     shortDescription: 'Advanced micro-incision phacoemulsification, optical biometry, and premium intraocular lens (IOL) counseling.',
     overview: 'Cataracts cause clouding of the natural lens, leading to gradual loss of clarity, poor night vision, and washed-out colors. At RV Superspeciality Eye Care, our cataract unit provides precision pre-operative biometry and modern surgical consultation for clear, restorative visual outcomes.',
     keyHighlights: [
       'High-precision optical biometry and keratometry',
-      'Micro-incision stitchless phacoemulsification evaluation',
+      'Micro-incision stitchless phacoemulsification',
       'Comprehensive counseling for Monofocal, Toric, and Multifocal IOLs',
       'Dedicated day-care procedure guidance with rapid visual recovery',
+      'Optic nerve fibre layer analysis with Optical Coherence Tomography',
       'Structured post-operative follow-up and vision rehabilitation'
     ],
     whoShouldVisit: [
@@ -57,7 +58,7 @@ export const availableServices = [
     title: 'Cornea Services',
     slug: 'cornea-services',
     iconName: 'Sparkles',
-    image: '/images/service-cornea.jpg',
+    image: '/images/service-cornea.webp',
     shortDescription: 'Expert evaluation and medical management of corneal infections, dry eye syndrome, pterygium, and surface disorders.',
     overview: 'The cornea is the eye’s transparent front window. Corneal infections, surface dystrophies, and severe dry eyes can cause intense discomfort and compromise vision. Our cornea service provides detailed slit-lamp diagnostics, corneal scraping/staining, and targeted medical therapies.',
     keyHighlights: [
@@ -81,7 +82,7 @@ export const availableServices = [
     title: 'Glaucoma Services',
     slug: 'glaucoma-services',
     iconName: 'Activity',
-    image: '/images/service-glaucoma.jpg',
+    image: '/images/service-glaucoma.webp',
     shortDescription: 'Early detection, Goldmann applanation tonometry, central corneal thickness assessment, and progressive visual preservation.',
     overview: 'Known as the "silent thief of sight," glaucoma causes irreversible damage to the optic nerve, typically associated with elevated intraocular pressure. Early detection is paramount because peripheral vision loss occurs painlessly until advanced stages.',
     keyHighlights: [
@@ -105,7 +106,7 @@ export const availableServices = [
     title: 'Medical Retina Services',
     slug: 'medical-retina-services',
     iconName: 'ShieldCheck',
-    image: '/images/service-retina.jpg',
+    image: '/images/service-retina.webp',
     shortDescription: 'Non-surgical diagnostic evaluation and medical management of diabetic retinopathy, vein occlusions, and macular disorders.',
     overview: 'The medical retina service focuses on diagnosing and medically managing diseases of the retina and choroid without major vitreoretinal surgery. We specialize in screening and medically stabilizing diabetic retinopathy, retinal vascular occlusions, and age-related macular degeneration.',
     keyHighlights: [
@@ -129,7 +130,7 @@ export const availableServices = [
     title: 'Opticals',
     slug: 'opticals',
     iconName: 'Glasses',
-    image: '/images/service-opticals.jpg',
+    image: '/images/service-opticals.webp',
     shortDescription: 'In-house precision optical dispensing unit featuring curated ergonomic frames and certified ophthalmic lenses.',
     overview: 'An accurate prescription is only as good as the dispensing quality of your eyeglasses. Our in-house optical center ensures your clinical prescription is translated into properly centered, certified lenses matched with comfortable, durable frames suited to your lifestyle.',
     keyHighlights: [

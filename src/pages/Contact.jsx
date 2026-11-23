@@ -205,8 +205,8 @@ export default function Contact() {
                       Email Correspondence
                     </h4>
                     <p className="text-sm font-bold text-gray-800">
-                      <a href="mailto:info@rveyecare.com" className="text-[#142F80] hover:text-[#F36B16] transition-colors">
-                        info@rveyecare.com
+                      <a href="mailto:rveyehospital@gmail.com" className="text-[#142F80] hover:text-[#F36B16] transition-colors">
+                        rveyehospital@gmail.com
                       </a>
                     </p>
                     <p className="text-xs text-gray-600 mt-0.5">
@@ -227,10 +227,10 @@ export default function Contact() {
                       OPD Consultation Timings
                     </h4>
                     <p className="text-xs text-gray-800 font-semibold">
-                      Monday – Saturday: 9:00 AM – 7:30 PM
+                      Monday – Saturday: 10:00 AM – 9:00 PM
                     </p>
                     <p className="text-xs text-gray-600">
-                      Sunday: 9:00 AM – 1:00 PM (Emergency on-call)
+                      Sunday: Holiday
                     </p>
                   </div>
                 </div>

@@ -59,10 +59,11 @@ export default function Home() {
               {/* Card 1: Male Doctor - Dr. Vishnu Vardhan Reddy */}
               <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white w-full group">
                 <img
-                  src="/images/doctor-vishnuvardhan.jpg"
+                  src="/images/doctor-vishnuvardhan.webp"
                   alt="RV Superspeciality Eye Care - Dr. Vishnu Vardhan Reddy performing clinical consultation"
                   width={600}
                   height={520}
+                  loading="lazy"
                   decoding="async"
                   className="w-full h-[380px] sm:h-[420px] md:h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
                 />
@@ -70,17 +71,17 @@ export default function Home() {
                 {/* Subtle Gradient at Bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#142F80]/80 via-transparent to-transparent pointer-events-none" />
 
-                {/* Floating Trust Card - Top Left */}
-                <div className="absolute top-4 left-4 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-[#E3E9F4] hidden sm:flex items-center gap-2.5 max-w-[200px]">
-                  <div className="w-8 h-8 rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
-                    <CheckCircle size={18} />
+                {/* Floating Specialist Card - Top Left */}
+                <div className="absolute top-3 left-3 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2 sm:p-2.5 sm:px-3 rounded-xl sm:rounded-2xl shadow-lg border border-[#E3E9F4] flex items-center gap-2 sm:gap-2.5 max-w-[210px] z-10">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-[#FFF5EE] flex items-center justify-center text-[#F36B16] flex-shrink-0">
+                    <CheckCircle size={17} />
                   </div>
                   <div className="leading-tight">
-                    <span className="text-xs font-bold text-[#142F80] block">
-                      Ethical Practice
+                    <span className="text-xs font-bold text-[#142F80] block whitespace-nowrap">
+                      Glaucoma Specialist
                     </span>
-                    <span className="text-[10.5px] text-gray-500">
-                      Transparent clinical guidance
+                    <span className="text-[10px] sm:text-[10.5px] text-gray-500 block whitespace-nowrap">
+                      Comprehensive eye care
                     </span>
                   </div>
                 </div>
@@ -95,7 +96,7 @@ export default function Home() {
                       Dr. Vishnu Vardhan Reddy
                     </div>
                     <span className="text-[11px] text-[#F36B16] font-semibold block truncate">
-                      Phaco Surgeon & Glaucoma Specialist
+                      Glaucoma Specialist & Phaco Surgeon
                     </span>
                   </div>
                 </div>
@@ -104,10 +105,11 @@ export default function Home() {
               {/* Card 2: Female Doctor - Dr. Rachana */}
               <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white w-full group">
                 <img
-                  src="/images/doctor-rachana.jpg"
+                  src="/images/doctor-rachana.webp"
                   alt="RV Superspeciality Eye Care - Dr. Rachana performing retina consultation"
                   width={600}
                   height={520}
+                  loading="lazy"
                   decoding="async"
                   className="w-full h-[380px] sm:h-[420px] md:h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
                 />
@@ -115,16 +117,16 @@ export default function Home() {
                 {/* Subtle Gradient at Bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#142F80]/80 via-transparent to-transparent pointer-events-none" />
 
-                {/* Floating Trust Card - Top Left */}
-                <div className="absolute top-4 left-4 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-[#E3E9F4] hidden sm:flex items-center gap-2.5 max-w-[200px]">
-                  <div className="w-8 h-8 rounded-xl bg-[#EDF3FC] flex items-center justify-center text-[#142F80] flex-shrink-0">
-                    <CheckCircle size={18} className="text-[#142F80]" />
+                {/* Floating Specialist Card - Top Left */}
+                <div className="absolute top-3 left-3 sm:top-5 sm:left-5 bg-white/95 backdrop-blur-sm p-2 sm:p-2.5 sm:px-3 rounded-xl sm:rounded-2xl shadow-lg border border-[#E3E9F4] flex items-center gap-2 sm:gap-2.5 max-w-[210px] z-10">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-[#EDF3FC] flex items-center justify-center text-[#142F80] flex-shrink-0">
+                    <CheckCircle size={17} className="text-[#142F80]" />
                   </div>
                   <div className="leading-tight">
-                    <span className="text-xs font-bold text-[#142F80] block">
+                    <span className="text-xs font-bold text-[#142F80] block whitespace-nowrap">
                       Retina Specialist
                     </span>
-                    <span className="text-[10.5px] text-gray-500">
+                    <span className="text-[10px] sm:text-[10.5px] text-gray-500 block whitespace-nowrap">
                       Comprehensive eye care
                     </span>
                   </div>
@@ -235,7 +237,7 @@ export default function Home() {
               <ScrollReveal animation="fade-right" duration={700}>
                 <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
                   <img 
-                    src="/images/about-hospital.jpg" 
+                    src="/images/about-hospital.webp" 
                     alt="RV Superspeciality Eye Care Facility" 
                     width={600}
                     height={400}
@@ -510,7 +512,7 @@ export default function Home() {
               <ScrollReveal animation="fade-left" duration={700}>
                 <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
                   <img 
-                    src="/images/about-care.jpg" 
+                    src="/images/about-care.webp" 
                     alt="Patient Experience at RV Superspeciality Eye Care" 
                     width={600}
                     height={420}
@@ -562,10 +564,15 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xl mx-auto">
-              <Link to="/appointment" className="btn btn-primary btn-lg w-full sm:w-auto justify-center shadow-lg hover:shadow-orange">
+              <a
+                href="https://wa.me/918523815336?text=Hello%20RV%20Superspeciality%20Eye%20Care%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-lg w-full sm:w-auto justify-center shadow-lg hover:shadow-orange flex items-center gap-2"
+              >
                 <Calendar size={19} />
                 <span>Book an Appointment</span>
-              </Link>
+              </a>
 
               <Link to="/contact" className="btn btn-outline-white btn-lg w-full sm:w-auto justify-center">
                 <span>View Clinic Location & Timings</span>

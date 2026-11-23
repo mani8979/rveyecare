@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Maximize2, Camera, Info } from 'lucide-react';
+import { Maximize2, Camera, Info, ChevronDown } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import Lightbox from '../components/Lightbox';
 import ScrollReveal from '../components/ScrollReveal';
@@ -61,8 +61,8 @@ export default function Gallery() {
       <section className="section bg-[#F8FAFD]">
         <div className="container">
           
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+          {/* Category Filter Pills (Desktop & Tablet) */}
+          <div className="hidden sm:flex flex-wrap items-center justify-center gap-2 mb-12">
             {galleryCategories.map((cat) => (
               <button
                 key={cat}
@@ -77,6 +77,27 @@ export default function Gallery() {
                 {cat}
               </button>
             ))}
+          </div>
+
+          {/* Mobile Category Dropdown Filter (< sm screens) */}
+          <div className="sm:hidden mb-8 max-w-sm mx-auto">
+            <div className="relative">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full bg-white border border-[#CBD9F5] rounded-2xl px-4 py-3 text-sm font-bold text-[#142F80] shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-[#142F80] pr-10"
+                aria-label="Filter gallery by category"
+              >
+                {galleryCategories.map((cat) => (
+                  <option key={cat} value={cat}>
+                    Category: {cat}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#142F80]">
+                <ChevronDown size={18} />
+              </div>
+            </div>
           </div>
 
           {/* Image Grid with Staggered Scroll Fade: 2 columns on mobile (side by side), 3 on desktop */}

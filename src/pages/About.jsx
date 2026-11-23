@@ -103,7 +103,7 @@ export default function About() {
                 <div className="grid grid-cols-2 gap-4 items-stretch">
                   <div className="rounded-2xl overflow-hidden shadow-md h-56 sm:h-64 bg-gray-100">
                     <img 
-                      src="/images/about-hospital.jpg" 
+                      src="/images/about-hospital.webp" 
                       alt="RV Superspeciality Eye Care Facility" 
                       width={300}
                       height={256}
@@ -114,7 +114,7 @@ export default function About() {
                   </div>
                   <div className="rounded-2xl overflow-hidden shadow-md h-56 sm:h-64 bg-gray-100">
                     <img 
-                      src="/images/gallery-consultation.jpg" 
+                      src="/images/gallery-consultation.webp" 
                       alt="Consultation Chambers" 
                       width={300}
                       height={256}

@@ -42,7 +42,7 @@ export default function Doctors() {
     <div className="doctors-page overflow-hidden">
       <SEO
         title="Expert Eye Specialists & Ophthalmologists in Pendurthi | RV Eye Care"
-        description="Meet our experienced eye specialists at RV Superspeciality Eye Care, Pendurthi: Dr. Vishnu Vardhan Reddy (Phaco & Glaucoma) and Dr. Rachana (Retina Specialist)."
+        description="Meet our experienced eye specialists at RV Superspeciality Eye Care, Pendurthi: Dr. Vishnu Vardhan Reddy (Glaucoma Specialist & Phaco Surgeon) and Dr. Rachana (Retina Specialist)."
         path="/doctors"
         schema={doctorsSchema}
       />
@@ -161,13 +161,15 @@ export default function Doctors() {
 
                   {/* Footer Action */}
                   <div className="p-6 sm:p-7 pt-0">
-                    <Link
-                      to="/appointment"
-                      className="btn btn-primary w-full py-2.5 shadow-sm hover:shadow-orange"
+                    <a
+                      href={`https://wa.me/918523815336?text=${encodeURIComponent(`Hello RV Superspeciality Eye Care, I would like to book a consultation with ${doc.name}.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary w-full py-2.5 shadow-sm hover:shadow-orange flex items-center justify-center gap-2"
                     >
                       <Calendar size={16} />
                       <span>Book Consultation</span>
-                    </Link>
+                    </a>
                   </div>
 
                 </div>

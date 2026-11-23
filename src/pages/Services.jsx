@@ -438,10 +438,11 @@ export default function Services() {
 
             <div className="rounded-xl overflow-hidden border border-gray-200">
               <img 
-                src="/rv-services-poster.jpg" 
+                src="/rv-services-poster.webp" 
                 alt="RV Superspeciality Eye Care Scope of Services Poster" 
                 width={800}
                 height={1000}
+                loading="lazy"
                 decoding="async"
                 className="w-full h-auto object-contain"
               />

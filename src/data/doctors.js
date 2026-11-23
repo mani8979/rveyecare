@@ -7,18 +7,18 @@ export const doctorsData = [
   {
     id: 'doc-1',
     name: 'Dr. Vishnu Vardhan Reddy',
-    designation: 'Phaco Surgeon & Glaucoma Specialist',
+    designation: 'Glaucoma Specialist & Phaco Surgeon',
     qualifications: 'MBBS, MS (Ophthalmology), Fellowship in Glaucoma',
-    specialisation: 'Phaco Surgeon & Glaucoma Specialist',
+    specialisation: 'Glaucoma Specialist & Phaco Surgeon',
     experience: '12+ Years Clinical Experience',
     registrationNo: 'State Medical Council Registered',
-    image: '/images/doctor-vishnuvardhan.jpg',
-    timings: 'Monday – Saturday: 9:00 AM – 7:30 PM',
+    image: '/images/doctor-vishnuvardhan.webp',
+    timings: 'Monday – Saturday: 10:00 AM – 9:00 PM (Sunday: Holiday)',
     languages: 'English, Telugu, Hindi',
-    bio: 'Experienced phacoemulsification cataract surgeon and glaucoma specialist dedicated to precision diagnostic tonometry, optic nerve head analysis, visual field assessment, and modern intraocular lens counseling.',
+    bio: 'Experienced glaucoma specialist and phacoemulsification cataract surgeon dedicated to precision diagnostic tonometry, optic nerve head analysis, visual field assessment, and modern intraocular lens counseling.',
     areasOfFocus: [
-      'Micro-incision Cataract Surgery (Phaco)',
       'Glaucoma Diagnostics & Applanation Tonometry',
+      'Micro-incision Cataract Surgery (Phaco)',
       'Optic Nerve Head & Visual Field Analysis',
       'Precision Intraocular Lens (IOL) Assessment'
     ]
@@ -31,8 +31,8 @@ export const doctorsData = [
     specialisation: 'Consultant Ophthalmologist and Retina Specialist',
     experience: '10+ Years Clinical Experience',
     registrationNo: 'State Medical Council Registered',
-    image: '/images/doctor-rachana.jpg',
-    timings: 'Monday – Saturday: 9:00 AM – 7:30 PM',
+    image: '/images/doctor-rachana.webp',
+    timings: 'Monday – Saturday: 10:00 AM – 9:00 PM (Sunday: Holiday)',
     languages: 'English, Telugu, Hindi',
     bio: 'Specialized in medical retina, fundus biomicroscopy, and comprehensive ophthalmic evaluations. Dedicated to early detection and management of diabetic retinopathy, macular disorders, and personalized patient counseling.',
     areasOfFocus: [
@@ -46,7 +46,7 @@ export const doctorsData = [
 
 export const doctorSpecialities = [
   'All Specialities',
-  'Retina Specialist',
-  'Phaco Surgeon & Glaucoma'
+  'Glaucoma & Phaco Surgeon',
+  'Retina Specialist'
 ];
 

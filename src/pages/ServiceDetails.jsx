@@ -111,27 +111,27 @@ export default function ServiceDetails() {
         <div className="container relative z-10">
           {/* Breadcrumbs */}
           <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center flex-wrap gap-2 text-xs text-blue-200">
+            <ol className="flex items-center flex-wrap gap-2 text-xs text-blue-100 font-medium">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                <Link to="/" className="text-blue-100 hover:text-white transition-colors">Home</Link>
               </li>
-              <li><ChevronRight size={13} className="text-blue-300/60" /></li>
+              <li><ChevronRight size={13} className="text-blue-200/80" /></li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">Services</Link>
+                <Link to="/services" className="text-blue-100 hover:text-white transition-colors">Services</Link>
               </li>
-              <li><ChevronRight size={13} className="text-blue-300/60" /></li>
-              <li className="text-[#F36B16] font-semibold">{service.title}</li>
+              <li><ChevronRight size={13} className="text-blue-200/80" /></li>
+              <li className="text-[#F36B16] font-bold">{service.title}</li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
             {/* Category Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-xs border border-white/20 mb-4 text-xs font-semibold text-orange-200">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 mb-4 text-xs font-semibold text-white shadow-xs">
               <IconComponent size={14} className="text-[#F36B16]" />
               <span>RV Scope of Services &bull; Super-Speciality Eye Care</span>
             </div>
 
-            <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight mb-4">
+            <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight mb-4">
               {service.title}
             </h1>
 
@@ -141,13 +141,15 @@ export default function ServiceDetails() {
 
             {/* Quick Actions */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
-              <Link
-                to={`/appointment?service=${service.id}`}
+              <a
+                href={`https://wa.me/918523815336?text=${encodeURIComponent(`Hello RV Superspeciality Eye Care, I would like to book an appointment for ${service.title}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary btn-lg shadow-lg hover:shadow-orange justify-center"
               >
                 <Calendar size={18} />
                 <span>Book Appointment for {service.title}</span>
-              </Link>
+              </a>
 
               <a
                 href="tel:+918523815336"
@@ -290,20 +292,22 @@ export default function ServiceDetails() {
               {/* Bottom Consultation Booking Action */}
               <div className="card bg-gradient-to-r from-[#142F80] to-[#1E3A8A] text-white p-7 sm:p-8 rounded-3xl shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-1">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
                     Ready to Consult for {service.title}?
                   </h3>
                   <p className="text-xs sm:text-sm text-blue-100">
                     Book your consultation slot with RV Superspeciality Eye Care today.
                   </p>
                 </div>
-                <Link
-                  to={`/appointment?service=${service.id}`}
+                <a
+                  href={`https://wa.me/918523815336?text=${encodeURIComponent(`Hello RV Superspeciality Eye Care, I would like to book an appointment for ${service.title}.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-primary btn-lg shadow-md hover:shadow-orange flex-shrink-0 w-full sm:w-auto justify-center"
                 >
                   <Calendar size={18} />
                   <span>Book Appointment</span>
-                </Link>
+                </a>
               </div>
 
             </div>
@@ -343,8 +347,8 @@ export default function ServiceDetails() {
                     <Clock size={16} className="text-[#F36B16] flex-shrink-0 mt-0.5" />
                     <div>
                       <strong className="block text-gray-900">Consultation Timings:</strong>
-                      <span>Monday – Saturday: 9:00 AM – 7:30 PM</span><br />
-                      <span>Sunday: 9:00 AM – 1:00 PM</span>
+                      <span>Monday – Saturday: 10:00 AM – 9:00 PM</span><br />
+                      <span>Sunday: Holiday</span>
                     </div>
                   </div>
 

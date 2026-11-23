@@ -1,23 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  ArrowRight, 
-  Eye, 
-  Microscope, 
-  HeartPulse 
+import {
+  Calendar,
+  ArrowRight,
+  Eye,
+  Microscope,
+  HeartPulse
 } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section 
+    <section
       className="relative overflow-hidden bg-white border-b border-[#E3E9F4] pt-6 pb-10 sm:pt-9 sm:pb-12 lg:pt-14 lg:pb-16 min-h-0 lg:min-h-[640px] flex items-center w-full"
     >
       {/* Desktop Background Image Layer (Active on desktop lg+ 1024px+, hidden on mobile/tablet < lg) */}
-      <div 
+      <div
         className="hidden lg:block absolute inset-0 bg-cover bg-no-repeat lg:bg-[position:right_center]"
         style={{
-          backgroundImage: "url('/images/Modern%20Ophthalmology%20Clinic%20Examination.png')",
+          backgroundImage: "url('/images/Modern%20Ophthalmology%20Clinic%20Examination.webp')",
         }}
         aria-hidden="true"
       >
@@ -26,10 +26,10 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10 w-full px-4 sm:px-6">
-        
+
         {/* Main Content Area (Text + Buttons) */}
         <div className="w-full max-w-xl lg:max-w-[540px] xl:max-w-[580px] flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0">
-          
+
           {/* Small Label Badge */}
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#EDF3FC] border border-[#CBD9F5] mb-3.5 sm:mb-5 shadow-xs max-w-full min-w-0">
             <span className="w-2 h-2 rounded-full bg-[#F36B16] animate-pulse flex-shrink-0" />
@@ -58,14 +58,16 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="hero-cta-buttons flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full sm:w-auto">
-            <Link
-              to="/appointment"
+            <a
+              href="https://wa.me/918523815336?text=Hello%20RV%20Superspeciality%20Eye%20Care%2C%20I%20would%20like%20to%20book%20an%20appointment."
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary btn-lg shadow-md hover:shadow-orange flex items-center justify-center gap-2 text-sm sm:text-base px-6 sm:px-7 py-3.5 sm:py-3.5 w-full sm:w-auto transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 min-h-[48px]"
             >
               <Calendar size={18} />
               <span>Book an Appointment</span>
               <ArrowRight size={17} />
-            </Link>
+            </a>
 
             <Link
               to="/services"
@@ -81,7 +83,7 @@ export default function Hero() {
         {/* Three Trust Highlights */}
         <div className="w-full max-w-3xl lg:max-w-4xl mt-8 sm:mt-10 lg:mt-14 pt-0 sm:pt-2">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-            
+
             {/* Card 1 */}
             <div className="flex items-center justify-start gap-3.5 bg-white p-3.5 sm:p-4 rounded-2xl border border-[#E3E9F4] shadow-xs hover:shadow-md hover:border-[#142F80]/20 transition-all duration-300 transform hover:-translate-y-0.5">
               <div className="w-10 h-10 rounded-xl bg-[#EDF3FC] border border-[#CBD9F5] shadow-xs flex items-center justify-center text-[#F36B16] flex-shrink-0">

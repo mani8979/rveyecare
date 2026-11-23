@@ -182,8 +182,8 @@ export default function Footer() {
                 <Mail size={18} className="text-[#F36B16] flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="text-white font-semibold block">Email Address:</span>
-                  <a href="mailto:info@rveyecare.com" className="text-xs text-gray-200 hover:text-[#F36B16]">
-                    info@rveyecare.com
+                  <a href="mailto:rveyehospital@gmail.com" className="text-xs text-gray-200 hover:text-[#F36B16]">
+                    rveyehospital@gmail.com
                   </a>
                 </div>
               </div>
@@ -193,10 +193,10 @@ export default function Footer() {
                 <div>
                   <span className="text-white font-semibold block">OPD Working Hours:</span>
                   <span className="text-xs text-gray-300 block">
-                    Mon – Sat: 9:00 AM – 7:30 PM
+                    Mon – Sat: 10:00 AM – 9:00 PM
                   </span>
                   <span className="text-xs text-gray-400 block">
-                    Sun: 9:00 AM – 1:00 PM (Emergency on-call)
+                    Sunday: Holiday
                   </span>
                 </div>
               </div>

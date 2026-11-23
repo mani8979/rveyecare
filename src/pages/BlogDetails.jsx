@@ -183,15 +183,20 @@ export default function BlogDetails() {
               <span className="badge badge-white text-[10px] mb-3">
                 PATIENT CONSULTATION
               </span>
-              <h3 className="text-xl font-bold mb-2">
+              <h3 className="text-xl font-bold text-white mb-2">
                 Experiencing Vision Changes?
               </h3>
               <p className="text-xs text-blue-100 leading-relaxed mb-5">
                 Early clinical evaluation prevents irreversible visual complications. Book your slot with RV Superspeciality Eye Care.
               </p>
-              <Link to="/appointment" className="btn btn-primary w-full py-2.5 shadow-sm">
+              <a
+                href="https://wa.me/918523815336?text=Hello%20RV%20Superspeciality%20Eye%20Care%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary w-full py-2.5 shadow-sm inline-flex items-center justify-center gap-2"
+              >
                 <span>Book Appointment</span>
-              </Link>
+              </a>
             </div>
 
             {/* Related Articles */}

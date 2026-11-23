@@ -38,13 +38,13 @@ export default function AppointmentForm({
 
   // Time slots
   const timeSlots = [
-    '09:30 AM – 10:30 AM',
-    '10:30 AM – 11:30 AM',
-    '11:30 AM – 12:30 PM',
-    '02:30 PM – 03:30 PM',
-    '03:30 PM – 04:30 PM',
-    '04:30 PM – 05:30 PM',
-    '05:30 PM – 06:30 PM'
+    '10:00 AM – 11:30 AM',
+    '11:30 AM – 01:00 PM',
+    '02:00 PM – 03:30 PM',
+    '03:30 PM – 05:00 PM',
+    '05:00 PM – 06:30 PM',
+    '06:30 PM – 08:00 PM',
+    '08:00 PM – 09:00 PM'
   ];
 
   // Validation function
@@ -299,18 +299,24 @@ Sent from RV Superspeciality Eye Care Website`;
         /* The Booking Form */
         <form onSubmit={handleSubmit} noValidate>
           
-          <div className="mb-6 pb-4 border-b border-gray-100 flex items-center justify-between flex-wrap gap-2">
+          <div className="mb-6 pb-4 border-b border-gray-100 flex items-center justify-between flex-wrap gap-3">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-[#142F80]">
                 Schedule an Eye Care Consultation
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-1">
-                Select from our verified ophthalmic scope services.
+                Select from our verified ophthalmic scope services or book directly via WhatsApp.
               </p>
             </div>
-            <span className="badge badge-orange font-mono text-[11px]">
-              Available Services Only
-            </span>
+            <a
+              href="https://wa.me/918523815336?text=Hello%20RV%20Superspeciality%20Eye%20Care%2C%20I%20would%20like%20to%20book%20an%20appointment."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F8EE] text-[#1E7E34] hover:bg-[#D4F4DF] text-xs font-bold transition-all border border-[#A3E6BA]"
+            >
+              <MessageSquare size={14} className="text-[#25D366]" />
+              <span>Book via WhatsApp</span>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

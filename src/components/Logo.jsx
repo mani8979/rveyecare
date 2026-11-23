@@ -32,7 +32,7 @@ export default function Logo({
       title="RV Superspeciality Eye Care - Return to start of page"
     >
       <img 
-        src="/rv-header-logo.png" 
+        src="/rv-header-logo.webp" 
         alt="RV Superspeciality Eye Care - Right Place For Your Bright Vision" 
         width={285}
         height={84}

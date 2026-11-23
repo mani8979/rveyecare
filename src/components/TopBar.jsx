@@ -25,7 +25,7 @@ export default function TopBar() {
 
           <div className="flex items-center gap-2">
             <Clock size={13} className="text-[#F36B16]" />
-            <span>Mon – Sat: 9:00 AM – 7:30 PM | Sun: 9:00 AM – 1:00 PM</span>
+            <span>Mon – Sat: 10:00 AM – 9:00 PM | Sun: Holiday</span>
           </div>
         </div>
 
