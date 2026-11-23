@@ -63,8 +63,9 @@ export default function Home() {
                   alt="RV Superspeciality Eye Care - Dr. Vishnu Vardhan Reddy performing clinical consultation"
                   width={600}
                   height={520}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
+                  fetchPriority="high"
                   className="w-full h-[380px] sm:h-[420px] md:h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
                 />
                 
@@ -106,11 +107,12 @@ export default function Home() {
               <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white w-full group">
                 <img
                   src="/images/doctor-rachana.webp"
-                  alt="RV Superspeciality Eye Care - Dr. Rachana performing retina consultation"
+                  alt="RV Superspeciality Eye Care - Dr. M. Rachana performing clinical consultation"
                   width={600}
                   height={520}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
+                  fetchPriority="high"
                   className="w-full h-[380px] sm:h-[420px] md:h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
                 />
                 
@@ -139,7 +141,7 @@ export default function Home() {
                   </div>
                   <div className="min-w-0">
                     <div className="text-xs sm:text-sm font-bold text-[#142F80] truncate">
-                      Dr. Rachana
+                      Dr. M. Rachana
                     </div>
                     <span className="text-[11px] text-[#F36B16] font-semibold block truncate">
                       Consultant Ophthalmologist and Retina Specialist

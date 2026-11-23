@@ -42,7 +42,7 @@ export default function Doctors() {
     <div className="doctors-page overflow-hidden">
       <SEO
         title="Expert Eye Specialists & Ophthalmologists in Pendurthi | RV Eye Care"
-        description="Meet our experienced eye specialists at RV Superspeciality Eye Care, Pendurthi: Dr. Vishnu Vardhan Reddy (Glaucoma Specialist & Phaco Surgeon) and Dr. Rachana (Retina Specialist)."
+        description="Meet our experienced eye specialists at RV Superspeciality Eye Care, Pendurthi: Dr. Vishnu Vardhan Reddy (Glaucoma Specialist & Phaco Surgeon) and Dr. M. Rachana (Retina Specialist)."
         path="/doctors"
         schema={doctorsSchema}
       />
@@ -94,7 +94,7 @@ export default function Doctors() {
                         alt={doc.name} 
                         width={112}
                         height={112}
-                        loading="lazy"
+                        loading="eager"
                         decoding="async"
                         className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover object-top border-2 border-[#142F80]/15 shadow-sm flex-shrink-0"
                       />

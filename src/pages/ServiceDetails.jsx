@@ -180,6 +180,8 @@ export default function ServiceDetails() {
                       alt={`${service.title} - Clinical Consultation`}
                       width={800}
                       height={400}
+                      loading="eager"
+                      fetchPriority="high"
                       decoding="async"
                       className="w-full h-full object-cover"
                     />
@@ -348,7 +350,7 @@ export default function ServiceDetails() {
                     <div>
                       <strong className="block text-gray-900">Consultation Timings:</strong>
                       <span>Monday – Saturday: 10:00 AM – 9:00 PM</span><br />
-                      <span>Sunday: Holiday</span>
+                      <span>Sunday: Closed</span>
                     </div>
                   </div>
 

@@ -104,6 +104,8 @@ export default function BlogDetails() {
                 alt={blog.title}
                 width={800}
                 height={420}
+                loading="eager"
+                fetchPriority="high"
                 decoding="async"
                 className="w-full h-[360px] sm:h-[420px] object-cover"
               />

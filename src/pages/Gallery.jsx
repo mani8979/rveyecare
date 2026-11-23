@@ -121,7 +121,8 @@ export default function Gallery() {
                     height={288}
                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
+                    loading={index < 4 ? "eager" : "lazy"}
+                    fetchPriority={index < 2 ? "high" : "auto"}
                   />
 
                   {/* Subtle Vignette Overlay for Clear Badge Visibility */}

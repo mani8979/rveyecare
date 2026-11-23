@@ -196,7 +196,7 @@ export default function Footer() {
                     Mon – Sat: 10:00 AM – 9:00 PM
                   </span>
                   <span className="text-xs text-gray-400 block">
-                    Sunday: Holiday
+                    Sunday: Closed
                   </span>
                 </div>
               </div>
