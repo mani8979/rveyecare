@@ -43,7 +43,7 @@ There is a common old myth that a cataract must "ripen" before treatment. In mod
     category: 'Preventive Care',
     publishDate: 'Educational Series',
     readTime: '3 min read',
-    image: '/images/blog-opticals-counter.webp',
+    image: '/images/blog-opticals-showroom.webp',
     excerpt: 'Why annual eye evaluations are vital even if you think your vision is normal. Discover what a complete ophthalmic checkup uncovers.',
     content: `
 ### Vision Testing vs. Comprehensive Eye Examination
