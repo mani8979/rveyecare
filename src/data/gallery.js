@@ -1,6 +1,6 @@
 /**
  * RV SUPERSPECIALITY EYE CARE - Gallery Data
- * Clean, verified facility and service photography.
+ * Genuine clinic facility, diagnostic suite, and clinical service photography.
  */
 
 export const galleryCategories = [
@@ -15,61 +15,97 @@ export const galleryCategories = [
 export const galleryImages = [
   {
     id: 1,
-    title: 'Hospital Infrastructure',
+    title: 'OPD & Refraction Suites Corridor',
+    category: 'Hospital Infrastructure',
+    image: '/images/gallery-corridor.webp'
+  },
+  {
+    id: 2,
+    title: 'Hospital Reception & Helpdesk',
     category: 'Hospital Infrastructure',
     image: '/images/gallery-reception.webp'
   },
   {
-    id: 2,
-    title: 'Consultation Rooms',
-    category: 'Consultation Rooms',
-    image: '/images/gallery-consultation.webp'
-  },
-  {
     id: 3,
-    title: 'Diagnostic Facilities',
-    category: 'Diagnostic Facilities',
-    image: '/images/gallery-diagnostics.webp'
+    title: 'Patient Waiting Lounge',
+    category: 'Hospital Infrastructure',
+    image: '/images/gallery-waiting.webp'
   },
   {
     id: 4,
-    title: 'Optical Center',
+    title: 'Inpatient & Consultation Hallway',
+    category: 'Hospital Infrastructure',
+    image: '/images/gallery-inpatient.webp'
+  },
+  {
+    id: 5,
+    title: 'Doctor Consultation Suite',
+    category: 'Consultation Rooms',
+    image: '/images/gallery-rachana-chamber.webp'
+  },
+  {
+    id: 6,
+    title: 'Senior Specialist Consultation Suite',
+    category: 'Consultation Rooms',
+    image: '/images/doctor-vishnuvardhan.webp'
+  },
+  {
+    id: 7,
+    title: '3D Optical Coherence Tomography (OCT)',
+    category: 'Diagnostic Facilities',
+    image: '/images/gallery-oct.webp'
+  },
+  {
+    id: 8,
+    title: 'Slit Lamp Biomicroscopy Suite',
+    category: 'Diagnostic Facilities',
+    image: '/images/gallery-slitlamp.webp'
+  },
+  {
+    id: 9,
+    title: 'Glaucoma Tonometry & Anterior Suite',
+    category: 'Diagnostic Facilities',
+    image: '/images/gallery-tonometry.webp'
+  },
+  {
+    id: 10,
+    title: 'Dilated Retinal Examination Care',
+    category: 'Patient Care',
+    image: '/images/gallery-retina.webp'
+  },
+  {
+    id: 11,
+    title: 'Ocular Surface & Cornea Evaluation',
+    category: 'Patient Care',
+    image: '/images/gallery-cornea-care.webp'
+  },
+  {
+    id: 12,
+    title: 'Ben Franklin Optical Dispensary',
     category: 'Eye-Care Services',
     image: '/images/gallery-opticals.webp'
   },
   {
-    id: 5,
-    title: 'Patient Care',
-    category: 'Patient Care',
-    image: '/images/gallery-counseling.webp'
-  },
-  {
-    id: 6,
-    title: 'General Eye Check-up',
+    id: 13,
+    title: 'General Eye Check-up & Anterior Segment',
     category: 'Eye-Care Services',
     image: '/images/service-general.webp'
   },
   {
-    id: 7,
-    title: 'Cataract Services',
+    id: 14,
+    title: 'Cataract Pre-Operative Biometry & OCT',
     category: 'Eye-Care Services',
     image: '/images/service-cataract.webp'
   },
   {
-    id: 8,
-    title: 'Cornea Services',
+    id: 15,
+    title: 'Cornea & Ocular Surface Diagnostics',
     category: 'Eye-Care Services',
     image: '/images/service-cornea.webp'
   },
   {
-    id: 9,
-    title: 'Glaucoma Services',
-    category: 'Eye-Care Services',
-    image: '/images/service-glaucoma.webp'
-  },
-  {
-    id: 10,
-    title: 'Medical Retina',
+    id: 16,
+    title: 'Medical Retina Screening',
     category: 'Eye-Care Services',
     image: '/images/service-retina.webp'
   }
