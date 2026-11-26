@@ -205,13 +205,27 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar: Copyright & Medical Disclaimer */}
+        {/* Bottom Bar: Copyright, Developed By & Medical Disclaimer */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-          <p>
-            &copy; {currentYear} <strong className="text-white">RV SUPERSPECIALITY EYE CARE</strong>. All rights reserved.
-          </p>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1 text-center md:text-left">
+            <p className="m-0">
+              &copy; {currentYear} <strong className="text-white">RV SUPERSPECIALITY EYE CARE</strong>. All rights reserved.
+            </p>
+            <span className="hidden sm:inline text-gray-600">|</span>
+            <p className="m-0 text-gray-300">
+              Developed by{' '}
+              <a 
+                href="https://www.growbird.in/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#F36B16] hover:text-[#ff8539] font-semibold transition-colors hover:underline"
+              >
+                Growbird
+              </a>
+            </p>
+          </div>
 
-          <p className="text-center md:text-right max-w-xl text-[11px] text-gray-400">
+          <p className="text-center md:text-right max-w-xl text-[11px] text-gray-400 m-0">
             Medical Disclaimer: Content on this website is for patient education and awareness only and does not constitute formal medical diagnosis. Consult an ophthalmologist for personalized medical advice.
           </p>
         </div>
