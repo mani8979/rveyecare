@@ -237,7 +237,7 @@ export default function Home() {
             {/* Left 6 cols: Hospital Visual */}
             <div className="lg:col-span-6 relative">
               <ScrollReveal animation="fade-right" duration={700}>
-                <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
+                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 sm:border-4 border-white bg-white">
                   <img 
                     src="/images/about-hospital.webp" 
                     alt="RV Superspeciality Eye Care Facility" 
@@ -245,15 +245,15 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-[400px] object-cover"
+                    className="w-full h-56 sm:h-72 lg:h-[400px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-md">
-                    <div className="flex items-center gap-2 text-xs font-bold text-[#142F80]">
-                      <Sparkles size={16} className="text-[#F36B16]" />
-                      <span>RV Superspeciality Ophthalmology Center</span>
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/60 shadow-md">
+                    <div className="flex items-center gap-1.5 sm:gap-2 text-xs font-bold text-[#142F80]">
+                      <Sparkles size={15} className="text-[#F36B16] flex-shrink-0" />
+                      <span className="truncate">RV Superspeciality Ophthalmology Center</span>
                     </div>
-                    <span className="text-xs text-gray-600">
+                    <span className="text-[11px] sm:text-xs text-gray-600 block mt-0.5 line-clamp-1 sm:line-clamp-none">
                       Committed to ethical, transparent super-speciality eye healthcare.
                     </span>
                   </div>
@@ -512,7 +512,7 @@ export default function Home() {
             {/* Right 6 cols: Patient Care Visual */}
             <div className="lg:col-span-6 order-1 lg:order-2">
               <ScrollReveal animation="fade-left" duration={700}>
-                <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
+                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 sm:border-4 border-white bg-white">
                   <img 
                     src="/images/about-care.webp" 
                     alt="Patient Experience at RV Superspeciality Eye Care" 
@@ -520,19 +520,19 @@ export default function Home() {
                     height={420}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-[420px] object-cover"
+                    className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-md flex items-center justify-between">
-                    <div>
-                      <span className="text-xs font-bold text-[#142F80] block">
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/60 shadow-md flex items-center justify-between gap-2.5">
+                    <div className="min-w-0 flex-1">
+                      <span className="text-xs sm:text-xs font-bold text-[#142F80] truncate block">
                         Gentle & Thorough Eye Evaluations
                       </span>
-                      <span className="text-xs text-gray-500">
+                      <span className="text-[11px] sm:text-xs text-gray-500 truncate block mt-0.5">
                         Caring for seniors, working adults, and youth.
                       </span>
                     </div>
-                    <span className="badge badge-orange text-[10px]">
+                    <span className="badge badge-orange text-[10px] sm:text-xs px-2 py-0.5 flex-shrink-0 whitespace-nowrap">
                       Patient First
                     </span>
                   </div>
