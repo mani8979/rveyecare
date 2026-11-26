@@ -83,7 +83,7 @@ export const galleryImages = [
     id: 12,
     title: 'Ben Franklin Optical Dispensary',
     category: 'Eye-Care Services',
-    image: '/images/gallery-opticals.webp'
+    image: '/images/gallery-opticals-showroom.webp'
   },
   {
     id: 13,

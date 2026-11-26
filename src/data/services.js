@@ -130,7 +130,7 @@ export const availableServices = [
     title: 'Opticals',
     slug: 'opticals',
     iconName: 'Glasses',
-    image: '/images/service-opticals.webp',
+    image: '/images/service-opticals-showroom.webp',
     shortDescription: 'In-house precision optical dispensing unit featuring curated ergonomic frames and certified ophthalmic lenses.',
     overview: 'An accurate prescription is only as good as the dispensing quality of your eyeglasses. Our in-house optical center ensures your clinical prescription is translated into properly centered, certified lenses matched with comfortable, durable frames suited to your lifestyle.',
     keyHighlights: [
