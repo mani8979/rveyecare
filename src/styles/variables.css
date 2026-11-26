@@ -1,4 +1,8 @@
 :root {
+  /* Force Permanent Light Mode */
+  color-scheme: light !important;
+  supported-color-schemes: light !important;
+
   /* Brand Colours */
   --color-primary: #142F80;
   --color-primary-dark: #0D2059;

@@ -9,6 +9,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  forced-color-adjust: none;
 }
 
 html {
@@ -17,12 +18,16 @@ html {
   -webkit-text-size-adjust: 100%;
   width: 100%;
   min-height: 100%;
+  background-color: #FFFFFF !important;
+  color: var(--color-text-main);
+  color-scheme: light !important;
+  forced-color-adjust: none !important;
 }
 
 body {
   font-family: var(--font-family-base);
   color: var(--color-text-main);
-  background-color: var(--color-bg-white);
+  background-color: #FFFFFF !important;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,6 +35,18 @@ body {
   min-height: 100%;
   position: relative;
   overflow-x: clip;
+  color-scheme: light !important;
+  forced-color-adjust: none !important;
+}
+
+/* Explicit guard: Force permanent light mode even when phone/browser has Dark Mode turned ON */
+@media (prefers-color-scheme: dark) {
+  :root, html, body {
+    color-scheme: light !important;
+    background-color: #FFFFFF !important;
+    color: #202638 !important;
+    forced-color-adjust: none !important;
+  }
 }
 
 #root {
