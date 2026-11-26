@@ -76,8 +76,8 @@
   h3 { font-size: 1.25rem; }
 
   .section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
   }
 
   .grid-2,

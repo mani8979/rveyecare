@@ -232,7 +232,7 @@ export default function Home() {
       {/* SECTION 3: ABOUT RV SUPERSPECIALITY EYE CARE */}
       <section className="section bg-[#F3F6FC]">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left 6 cols: Hospital Visual */}
             <div className="lg:col-span-6 relative">
@@ -245,15 +245,15 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-56 sm:h-72 lg:h-[400px] object-cover"
+                    className="w-full h-48 sm:h-64 lg:h-[380px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/60 shadow-md">
-                    <div className="flex items-center gap-1.5 sm:gap-2 text-xs font-bold text-[#142F80]">
-                      <Sparkles size={15} className="text-[#F36B16] flex-shrink-0" />
+                  <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md px-3 py-2 sm:p-4 rounded-lg sm:rounded-2xl border border-white/60 shadow-xs">
+                    <div className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold text-[#142F80]">
+                      <Sparkles size={13} className="text-[#F36B16] flex-shrink-0" />
                       <span className="truncate">RV Superspeciality Ophthalmology Center</span>
                     </div>
-                    <span className="text-[11px] sm:text-xs text-gray-600 block mt-0.5 line-clamp-1 sm:line-clamp-none">
+                    <span className="text-[10px] sm:text-xs text-gray-500 hidden sm:block mt-0.5">
                       Committed to ethical, transparent super-speciality eye healthcare.
                     </span>
                   </div>
@@ -520,19 +520,19 @@ export default function Home() {
                     height={420}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
+                    className="w-full h-48 sm:h-64 lg:h-[400px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/60 shadow-md flex items-center justify-between gap-2.5">
+                  <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md px-3 py-2 sm:p-4 rounded-lg sm:rounded-2xl border border-white/60 shadow-xs flex items-center justify-between gap-2">
                     <div className="min-w-0 flex-1">
-                      <span className="text-xs sm:text-xs font-bold text-[#142F80] truncate block">
+                      <span className="text-[11px] sm:text-xs font-bold text-[#142F80] truncate block">
                         Gentle & Thorough Eye Evaluations
                       </span>
-                      <span className="text-[11px] sm:text-xs text-gray-500 truncate block mt-0.5">
+                      <span className="text-[10px] sm:text-xs text-gray-500 truncate hidden sm:block mt-0.5">
                         Caring for seniors, working adults, and youth.
                       </span>
                     </div>
-                    <span className="badge badge-orange text-[10px] sm:text-xs px-2 py-0.5 flex-shrink-0 whitespace-nowrap">
+                    <span className="badge badge-orange text-[9.5px] sm:text-xs px-2 py-0.5 flex-shrink-0 whitespace-nowrap">
                       Patient First
                     </span>
                   </div>
@@ -589,10 +589,10 @@ export default function Home() {
         <div className="container">
           <ScrollReveal animation="fade-up" duration={700}>
             <SectionHeading
-              badge="PATIENT EXPERIENCES"
+              badge="GOOGLE PATIENT REVIEWS"
               title="What Patients Say About"
               highlight="Our Care"
-              subtitle="Read representative feedback reflecting our commitment to patient-centred eye diagnostics and compassionate communication."
+              subtitle="Real, verified Google reviews from patients and families who experienced our clinical diagnostics, cataract surgeries, and compassionate ophthalmology care."
               centered
             />
           </ScrollReveal>
