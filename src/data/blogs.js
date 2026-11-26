@@ -11,7 +11,7 @@ export const blogsData = [
     category: 'Cataract Education',
     publishDate: 'Updated Monthly',
     readTime: '4 min read',
-    image: '/images/blog-cataract.webp',
+    image: '/images/blog-cataract-oct.webp',
     excerpt: 'Learn what causes clouding of your eye’s natural lens, how to identify early symptoms like glare and faded colors, and what to expect during a modern cataract consultation.',
     content: `
 ### What Is a Cataract?
@@ -43,7 +43,7 @@ There is a common old myth that a cataract must "ripen" before treatment. In mod
     category: 'Preventive Care',
     publishDate: 'Educational Series',
     readTime: '3 min read',
-    image: '/images/blog-checkup.webp',
+    image: '/images/blog-opticals-counter.webp',
     excerpt: 'Why annual eye evaluations are vital even if you think your vision is normal. Discover what a complete ophthalmic checkup uncovers.',
     content: `
 ### Vision Testing vs. Comprehensive Eye Examination
@@ -77,7 +77,7 @@ At RV Superspeciality Eye Care, a complete check-up includes:
     category: 'Glaucoma Care',
     publishDate: 'Awareness Series',
     readTime: '5 min read',
-    image: '/images/blog-glaucoma.webp',
+    image: '/images/blog-glaucoma-suite.webp',
     excerpt: 'Glaucoma is one of the leading causes of irreversible blindness worldwide. Discover how timely screening and pressure management preserve your vision.',
     content: `
 ### What Is Glaucoma?
@@ -104,7 +104,7 @@ Currently, optic nerve damage cannot be reversed. However, **further vision loss
     category: 'Symptoms & Care',
     publishDate: 'Patient Guidance',
     readTime: '4 min read',
-    image: '/images/blog-blurry.webp',
+    image: '/images/blog-blurry-checkup.webp',
     excerpt: 'From uncorrected refractive errors to dry eye syndrome and retinal conditions, understand why your vision might be hazy and when it requires immediate attention.',
     content: `
 ### What Does "Blurry Vision" Mean?
@@ -133,7 +133,7 @@ Seek immediate medical consultation if your blurry vision is accompanied by:
     category: 'Vision Wellness',
     publishDate: 'Lifestyle & Wellness',
     readTime: '3 min read',
-    image: '/images/blog-digital.webp',
+    image: '/images/blog-digital-surface.webp',
     excerpt: 'Modern work and smartphone use expose our eyes to continuous near-focus demands. Follow the 20-20-20 rule and practical ergonomic adjustments.',
     content: `
 ### What Is Digital Eye Strain (Computer Vision Syndrome)?
@@ -160,7 +160,7 @@ Extended screen time forces our ocular ciliary muscles into sustained contractio
     category: 'Cornea Health',
     publishDate: 'Clinical Awareness',
     readTime: '4 min read',
-    image: '/images/blog-cornea.webp',
+    image: '/images/blog-cornea-surgery.webp',
     excerpt: 'Your cornea is the crystal window of your eye. Learn how to protect it from abrasions, bacterial infections, and chronic tear instability.',
     content: `
 ### The Role of Your Cornea
