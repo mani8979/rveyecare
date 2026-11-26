@@ -108,5 +108,11 @@ export const galleryImages = [
     title: 'Medical Retina Screening',
     category: 'Eye-Care Services',
     image: '/images/service-retina.webp'
+  },
+  {
+    id: 17,
+    title: 'Modern Ophthalmic Surgical Suite',
+    category: 'Hospital Infrastructure',
+    image: '/images/gallery-ot.webp'
   }
 ];
