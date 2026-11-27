@@ -10,7 +10,6 @@ import {
   CheckCircle, 
   CheckCircle2, 
   Clock, 
-  Sparkles, 
   Award, 
   HeartHandshake, 
   Stethoscope, 
@@ -245,26 +244,16 @@ export default function Home() {
                     height={400}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-48 sm:h-64 lg:h-[380px] object-cover"
+                    className="w-full h-52 sm:h-64 lg:h-[380px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md px-3 py-2 sm:p-4 rounded-lg sm:rounded-2xl border border-white/60 shadow-xs">
-                    <div className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold text-[#142F80]">
-                      <Sparkles size={13} className="text-[#F36B16] flex-shrink-0" />
-                      <span className="truncate">RV Superspeciality Ophthalmology Center</span>
-                    </div>
-                    <span className="text-[10px] sm:text-xs text-gray-500 hidden sm:block mt-0.5">
-                      Committed to ethical, transparent super-speciality eye healthcare.
-                    </span>
-                  </div>
                 </div>
 
-                {/* Floating Badge */}
-                <div className="absolute bottom-4 right-4 bg-[#142F80] text-white p-4 rounded-2xl shadow-xl max-w-[210px] hidden md:block">
-                  <div className="text-2xl font-extrabold text-[#F36B16]">
+                {/* Floating Badge - Desktop Only */}
+                <div className="absolute -bottom-5 -right-5 bg-[#142F80] text-white p-4 rounded-2xl shadow-xl max-w-[210px] hidden lg:block border-2 border-white z-10">
+                  <div className="text-xl font-extrabold text-[#F36B16] leading-none mb-1">
                     RIGHT PLACE
                   </div>
-                  <div className="text-xs font-semibold text-gray-200">
+                  <div className="text-[11px] font-semibold text-gray-200 leading-snug">
                     FOR YOUR BRIGHT VISION
                   </div>
                 </div>
@@ -520,21 +509,12 @@ export default function Home() {
                     height={420}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-48 sm:h-64 lg:h-[400px] object-cover"
+                    className="w-full h-52 sm:h-64 lg:h-[400px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md px-3 py-2 sm:p-4 rounded-lg sm:rounded-2xl border border-white/60 shadow-xs flex items-center justify-between gap-2">
-                    <div className="min-w-0 flex-1">
-                      <span className="text-[11px] sm:text-xs font-bold text-[#142F80] truncate block">
-                        Gentle & Thorough Eye Evaluations
-                      </span>
-                      <span className="text-[10px] sm:text-xs text-gray-500 truncate hidden sm:block mt-0.5">
-                        Caring for seniors, working adults, and youth.
-                      </span>
-                    </div>
-                    <span className="badge badge-orange text-[9.5px] sm:text-xs px-2 py-0.5 flex-shrink-0 whitespace-nowrap">
-                      Patient First
-                    </span>
+                  {/* Subtle Accent Pill on Desktop */}
+                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-md border border-[#E3E9F4] hidden sm:flex items-center gap-1.5 z-10">
+                    <span className="w-2 h-2 rounded-full bg-[#F36B16]" />
+                    <span className="text-xs font-bold text-[#142F80]">Patient First</span>
                   </div>
                 </div>
               </ScrollReveal>
